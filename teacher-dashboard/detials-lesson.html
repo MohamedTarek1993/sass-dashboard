@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> الكورسات</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../main-scss/main.min.css" />
+    <link rel="stylesheet" href="scss/main.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
+
+    <!-- responsive -->
+    <!-- data table -->
+    <!-- data table -->
+    <!-- ? Favicon -->
+    <link rel="icon" href="../image/logo.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+        <!---------------------- start sidebar -------------------------------------------->
+
+        <section class="sidebar open">
+            <ul class="
+          nav nav-pills
+          flex-column
+          mb-sm-auto mb-0
+          align-items-center align-items-sm-start
+        " id="menu">
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="../image/icon-home.png" alt="icon" />
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="assistants.html" class="nav-link align-middle">
+                        <img src="../image/icon-assis.png" alt="icon" />
+                        <span>المساعدين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link align-middle">
+                        <img src="../image/icon-video.png" alt="icon" />
+                        <span> الكورسات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="students.html" class="nav-link align-middle">
+                        <img src="../image/icon-people.png" alt="icon" />
+                        <span>الطلاب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notfication.html" class="nav-link align-middle">
+                        <img src="../image/icon-notification-bing.png" alt="icon" />
+                        <span>الاشعارات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-security.png" alt="icon" />
+                        <span> اعدادات الامان</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
+                        <img src="../image/icon-login.png" alt="icon" />
+                        <span> تسجيل الخروج</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+        <!---------------------- end sidebar -------------------------------------------->
+        <!---------------------- start main content -------------------------------------------->
+
+        <section class="index_cards">
+            <!---------------------- start nav -------------------------------------------->
+            <nav class="nav_top navbar">
+                <div class="container">
+                    <div class="menu">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <div class="info">
+                        <div class="notfication">
+                            <i class="bi bi-bell"></i>
+                            <span class="alerts">
+                                3
+                            </span>
+                        </div>
+                        <div class="img">
+                            <img src="../image/person.png" alt="person">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </nav>
+            <!---------------------- finish nav -------------------------------------------->
+            <!---------------------- start content -------------------------------------------->
+            <div class="content_page">
+                <div class="container">
+                    <!-- header section -->
+                    <div class="main_topic">
+                        <h4> الكورسات / تفاصيل الكورس / تفاصيل الحصة </h4>
+                    </div>
+
+                    <header class="header">
+                        <img src="../image/header-vedio.png" alt="header">
+                        <div class="edit">
+                            <span onclick="toggleMenu('drop-menu-info')"><i class="bi bi-three-dots"></i></span>
+                        </div>
+                        <ul id="drop-menu-info" class="drop_menu_info">
+                            <li><a href="edit-lesson.html">تعديل البيانات</a></li>
+                            <li><a onclick="deleteion()"> حذف الحصة</a></li>
+                        </ul>
+                    </header>
+
+
+                    <div class="detials_course">
+                        <div class="row">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="../image/person.png" alt="person">
+                                </div>
+                                <h2> اساسيات المحاسبة المالية</h2>
+
+                                <ul>
+
+                                    <li><i class="bi bi-tags"></i> وصف الكورس : :
+                                        <span> هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
+                                            من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
+                                            الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. هذا النص هو مثال لنص
+                                            يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                                            العربى.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- tabs section -->
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true"> الفيديوهات و ملفات ال pdf</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">الواجبات (22)</button>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- pdf section -->
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <!-- search and filter section -->
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="search_topic">
+                                        <form>
+                                            <div class="input-group">
+                                                <input class="form-control" type="text"
+                                                    placeholder="  ابحث بإسم الفيديو ">
+                                                <span class="icon_search"><i class="bi bi-search"></i></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="dropdown dropdown_filter">
+                                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            كل الانواع
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                            <li><a class="dropdown-item" href="#">مدفوع</a></li>
+                                            <li><a class="dropdown-item" href="#">مجاناً </a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-12">
+                                    <div class="button">
+                                        <a class="btn first" href="add-student.html"> <i class="bi bi-plus"></i>
+                                            ملف pdf جديد </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-12">
+                                    <div class="button">
+                                        <a class="btn first" href="add-student.html"> <i class="bi bi-plus"></i>
+                                            فيديو جديد </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table -->
+                            <table class="table-responsive table_topic">
+                                <thead>
+                                    <tr>
+                                        <td>الترتيب</td>
+                                        <td>اسم </td>
+                                        <td> النوع</td>
+                                        <td> الحالة</td>
+                                        <td> الرابط</td>
+
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            اساسيات المحاسبة المالية
+                                        </td>
+                                        <td>فيديو</td>
+                                        <td>مدفوع </td>
+                                        <td>
+                                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                                                www.onlinecourse/ exam1 / session2.com</a>
+                                        </td>
+
+                                        <td class="button">
+                                            <a class="btn show" href="detials-course.html"> <i
+                                                    class="bi bi-eye"></i></a>
+                                            <a class="btn edit" href="edit-lesson.html"> <i
+                                                    class="bi bi-pencil"></i></a>
+                                            <button class="btn block" href="#"> <i
+                                                    class="bi bi-slash-circle"></i></button>
+                                            <button onclick="deleteion()" class="btn delete" href="#">
+                                                <i class="bi bi-box-arrow-left"></i></button>
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <!-- pdf section -->
+                        <!-- work section -->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <!-- search and filter section -->
+                            <div class="row">
+                                <div class="col-lg-8 col-md-6 col-12">
+                                    <div class="search_topic">
+                                        <form>
+                                            <div class="input-group">
+                                                <input class="form-control" type="text" placeholder=" ابحث بإسم الحصة">
+                                                <span class="icon_search"><i class="bi bi-search"></i></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="dropdown dropdown_filter">
+                                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            حالة الحصة
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                            <li><a class="dropdown-item" href="#">مدفوع</a></li>
+                                            <li><a class="dropdown-item" href="#">مجاناً </a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <div class="button">
+                                        <a class="btn first" href="add-lesson.html"> <i class="bi bi-plus"></i>
+                                            حصة جديدة </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table -->
+                            <table class="table-responsive table_topic">
+                                <thead>
+                                    <tr>
+                                        <td>اسم الحصة </td>
+                                        <td> الفيديوهات المُسجلة</td>
+                                        <td> ملفات pdf</td>
+                                        <td> حالة الحصة</td>
+
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            اساسيات المحاسبة المالية
+                                        </td>
+                                        <td>25 فيديو</td>
+                                        <td>12 مذكرة </td>
+                                        <td>مدفوع </td>
+
+                                        <td class="button">
+                                            <a class="btn show" href="detials-lesson.html"> <i
+                                                    class="bi bi-eye"></i></a>
+                                            <!-- <a class="btn edit" href="edit-lesson.html"> <i
+                                                        class="bi bi-pencil"></i></a> -->
+                                            <button class="btn block" href="#"> <i
+                                                    class="bi bi-slash-circle"></i></button>
+                                            <button onclick="deleteion()" class="btn delete" href="#">
+                                                <i class="bi bi-trash3"></i></button>
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- work section -->
+
+                    </div>
+                    <!-- tabs section -->
+
+
+                </div>
+
+
+            </div>
+            <!---------------------- finish  content -------------------------------------------->
+
+        </section>
+        <!---------------------- finish main content -------------------------------------------->
+
+    </main>
+
+    <!-- Modal Vedio -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tZXHq-CJm_I"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- main js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- main js -->
+    <script>
+
+        function openVideo() {
+            var videoModal = document.getElementById('video-modal');
+            videoModal.style.display = 'block';
+            var videoPlayer = document.getElementById('modal-video');
+            videoPlayer.play();
+
+            videoModal.addEventListener('click', closeOnOutsideClick);
+            document.addEventListener('keydown', closeOnEscapeKey);
+        }
+
+        function closeVideo() {
+            var videoModal = document.getElementById('video-modal');
+            videoModal.style.display = 'none';
+            var videoPlayer = document.getElementById('modal-video');
+            videoPlayer.pause();
+
+            videoModal.removeEventListener('click', closeOnOutsideClick);
+            document.removeEventListener('keydown', closeOnEscapeKey);
+        }
+
+        function closeOnOutsideClick(event) {
+            var videoPlayer = document.getElementById('modal-video');
+            if (event.target === videoModal || event.target === videoPlayer) {
+                closeVideo();
+            }
+        }
+
+        function closeOnEscapeKey(event) {
+            if (event.key === 'Escape') {
+                closeVideo();
+            }
+        }
+    </script>
+
+    <!-- show / hide edit menu in card -->
+    <script>
+        function toggleMenu(menuId) {
+            var menu = document.getElementById(menuId);
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+
+        document.addEventListener('click', function (event) {
+            var menu = document.getElementById('drop-menu-info');
+            var target = event.target;
+
+            if (!target.matches('.bi-three-dots')) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- show / hide edit menu in card -->
+    <!-- sweet alert for delete course -->
+    <script>
+        function deleteion() {
+            // Display the SweetAlert confirmation dialog
+            swal({
+                title: 'هل أنت متأكد من رغبتك في الحذف؟',
+                text: 'سيتم حذف !',
+                icon: 'warning',
+                buttons: ['إلغاء', 'نعم, قم بالحذف'],
+                dangerMode: true,
+            }).then(function (result) {
+                // Check if the user clicked the confirm button
+                if (result) {
+                    // Call the deletion function or perform the deletion action here
+                    // ...
+                    // For demonstration purposes, let's show another SweetAlert indicating successful deletion
+                    swal('تم الحذف!', 'تم حذف  بنجاح.', 'success');
+                }
+            });
+        }
+
+    </script>
+    <!-- sweet alert for delete course -->
+</body>
+
+</html>

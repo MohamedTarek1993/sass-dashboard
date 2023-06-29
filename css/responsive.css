@@ -1,0 +1,162 @@
+/* ---------------------------------------------------------media query------------------------------------------- */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1440px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 1024.98px) {
+  .copmrision .tab-content #myChart1 {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .selling_unites .input-group .hasDatepicker {
+    width: 70% !important;
+  }
+  .upper_section .time span,
+  .upper_section .time div {
+    font-size: 1rem;
+  }
+}
+/* Extra small devices (phones, 767px and down) */
+@media only screen and (max-width: 768.98px) {
+  .sidebar .menu-side-bar {
+    margin: 41% 0 8%;
+  }
+  .sidebar{
+    /* position: relative; */
+    height: 80vh;
+    min-height: 100%;
+  }
+  .upper_section {
+    flex-wrap: wrap;
+  }
+  .upper_section .time {
+    width: 49%;
+  }
+  .upper_section .info {
+    text-align: center;
+    padding-inline-end: 0%;
+    width: 100%;
+    margin: 3% 0;
+  }
+  .information .tab_info {
+    width: 100%;
+    padding: 0;
+  }
+  .information .d-flex,
+  .copmrision .d-flex {
+    flex-wrap: wrap;
+  }
+  .copmrision .tab-content {
+    width: 100%;
+  }
+  .copmrision .tab-content #myChart1 {
+    height: 450px !important;
+  }
+  .copmrision .nav {
+    width: 100%;
+  }
+  .selling_unites .input-group {
+    width: 90% !important;
+  }
+  .dropdown-btn span {
+    right: -5px;
+  }
+  span.check, span.closed {
+    width: 29%;}
+    
+}
+@media only screen and (max-width: 425px) {
+}
+/* Extra small devices (phones, 767px and down) */
+@media only screen and (max-width: 425px) {
+  .sidebar.collapsed{
+    display: block;
+    width: 100% !important;
+  }
+  .sidebar_resize{
+    display: none;
+  }
+  .toggle_menu{
+    display: none;
+  }
+  .sidebar .menu-side-bar{
+    margin: 8% 0 0;
+  }
+  .information .tab-content .tab-pane .box .card{
+    width: 100%;
+  }
+  #myChart2{
+    height: 500px !important;
+  }
+  .dropdown-btn span {
+    right: 35px;
+}
+.sidebar{
+  margin-bottom: 0;
+  position: relative;
+  min-height: unset;
+}
+.contect_side.change{
+  width: 100%;
+  margin-inline-start: 0;
+}
+.upper_section .time{
+  width: 100%;
+}
+.upper_section .info{
+  text-align: start;
+}
+.sidebar .menu-side-bar .side-item {
+  margin-bottom: 2%;
+}
+.sidebar .menu-side-bar .side-link ,.sidebar .menu-side-bar .dropdown-btn {
+  padding: 2% 4%;
+}
+.tabs_visis{
+  flex-wrap: wrap;
+}
+.tabs_visis li{
+width: 50%;
+margin-bottom: 2%;
+}
+}
+
+@media (max-width: 1000px) {
+  /* responsive tabel */
+  .table thead ,.candidates .table thead ,.all-order .table thead  {
+    display: none;
+  }
+  .table,.candidates ,.all-order .table,
+  .table tbody,.candidates tbody, .all-order .table tbody,
+  .table tr,.candidates tr,.all-order .table tr,
+  .table td,.candidates td,.all-order .table td {
+    display: block;
+    width: 97%;
+  }
+  .all-order .table tbody tr{
+    border: none;
+  }
+  .table tr ,.candidates tr {
+    margin-bottom: 15px;
+  }
+  .table td ,.candidates .table td {
+    text-align: left !important;
+    padding-right: 50%;
+    position: relative;
+  }
+  .table td::before ,.candidates .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    right: 0;
+    width: 31%;
+    font-size: 15px;
+    text-align: left;
+    color: black;
+  }
+  .table-work.table tbody tr:nth-child(even){
+    color: white;
+  }
+  /* responsive tabel */
+}

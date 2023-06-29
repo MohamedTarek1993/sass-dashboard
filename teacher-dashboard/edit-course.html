@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> الكورس</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../main-scss/main.min.css" />
+    <link rel="stylesheet" href="scss/main.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
+
+    <!-- responsive -->
+    <!-- data table -->
+    <!-- data table -->
+    <!-- ? Favicon -->
+    <link rel="icon" href="../image/logo.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+        <!---------------------- start sidebar -------------------------------------------->
+
+        <section class="sidebar open">
+            <ul class="
+          nav nav-pills
+          flex-column
+          mb-sm-auto mb-0
+          align-items-center align-items-sm-start
+        " id="menu">
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="../image/icon-home.png" alt="icon" />
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="assistants.html" class="nav-link align-middle">
+                        <img src="../image/icon-assis.png" alt="icon" />
+                        <span>المساعدين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link align-middle">
+                        <img src="../image/icon-video.png" alt="icon" />
+                        <span> الكورسات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="students.html" class="nav-link align-middle">
+                        <img src="../image/icon-people.png" alt="icon" />
+                        <span>الطلاب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notfication.html" class="nav-link align-middle">
+                        <img src="../image/icon-notification-bing.png" alt="icon" />
+                        <span>الاشعارات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-security.png" alt="icon" />
+                        <span> اعدادات الامان</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
+                        <img src="../image/icon-login.png" alt="icon" />
+                        <span> تسجيل الخروج</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+        <!---------------------- end sidebar -------------------------------------------->
+        <!---------------------- start main content -------------------------------------------->
+
+        <section class="index_cards">
+            <!---------------------- start nav -------------------------------------------->
+            <nav class="nav_top navbar">
+                <div class="container">
+                    <div class="menu">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <div class="info">
+                        <div class="notfication">
+                            <i class="bi bi-bell"></i>
+                            <span class="alerts">
+                                3
+                            </span>
+                        </div>
+                        <div class="img">
+                            <img src="../image/person.png" alt="person">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </nav>
+            <!---------------------- finish nav -------------------------------------------->
+            <!---------------------- start content -------------------------------------------->
+            <div class="content_page">
+                <div class="container">
+                    <!-- header section -->
+                    <div class="main_topic">
+                        <h4>   تعديل كورس</h4>
+                    </div>
+
+                    <form class="form_topic">
+                        <!-- start input -->
+                        <div class="input-group input-group-upload">
+                            <img id="current-image" class="profile-image" src="../image/upload.png" alt="Profile Image">
+                            <div class="upload-icon" id="upload-icon">
+                                <i class="bi bi-camera-fill"></i>
+                            </div>
+
+                            <input id="image-input" class="hidden" type="file" accept="image/*">
+                        </div>
+                        <!-- start input -->
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label">اسم الكورس </label>
+                                    <input required type="text" placeholder="اكتب اسم الكورس" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- start input -->
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> حالة الكورس</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1"> مجاني</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5"
+                                            value="option2" onchange="togglePrice()">
+                                        <label class="form-check-label" for="inlineCheckbox2"> مدفوع</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <div class="course_price" id="coursePrice">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> سعر الكورس</label>
+                                        <input type="text" class="form-control">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- start input -->
+                        <div class="row">
+                            <label class="form-label"> مدة الكورس</label>
+                            <div class="col-lg-6 col-12">
+                                <div class="input-group">
+                                    <input type="date" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="input-group">
+                                    <input type="date" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> المراحل التعليمية</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            onchange="toggleRow()" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">تعليم اساسي</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                            value="option2" onchange="toggleUniversity()">
+                                        <label class="form-check-label" for="inlineCheckbox2">تعليم جامعي</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
+                                            value="option3" onchange="toggleFree()">
+                                        <label class="form-check-label" for="inlineCheckbox3">تعليم حر </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <!-- main education -->
+                        <div class="main_education" id="mainEducation">
+                            <h4>تعليم اساسي</h4>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> الصلاحيات</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> المرحله التعليمية</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> الصف الدراسي</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> المواد</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main education -->
+
+                        <!-- university education -->
+                        <div class="university_education" id="universityEducation">
+                            <h4>تعليم جامعي</h4>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> المستوي التعليمي</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> الجامعة</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> الكلية</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> الفرق</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> القسم</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> المواد</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> الترم</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- university education -->
+                        <!-- free education -->
+                        <div class="free_education" id="freeEducation">
+                            <h4>تعليم حر</h4>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> القسم</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> التخصص</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- free education -->
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="input-group pt-4">
+                                <div class="file-upload-wrapper" data-text="اسحب الفيديو التى تريد اضافتها  او قم بفتحها من هنا">
+                                    <input required name="file-upload-field form-control" type="file"
+                                        class="file-upload-field" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> وصف الكورس</label>
+                                    <textarea class="form-control" placeholder="ادخل شرح الكورس"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="button" 
+                                    class="btn first"> تعديل</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <!---------------------- finish  content -------------------------------------------->
+
+        </section>
+        <!---------------------- finish main content -------------------------------------------->
+
+    </main>
+   
+
+    <!-- main js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- main js -->
+    <!-- upload image -->
+    <script>
+        const currentImage = document.getElementById("current-image");
+        const uploadIcon = document.getElementById("upload-icon");
+        const imageInput = document.getElementById("image-input");
+
+        uploadIcon.addEventListener("click", () => {
+            imageInput.click();
+        });
+
+        imageInput.addEventListener("change", handleImageUpload);
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                currentImage.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+    </script>
+    <!-- upload image -->
+    <!-- select picker -->
+    <script>
+        $(document).ready(function () {
+            $('.form-select').selectpicker();
+        });
+
+    </script>
+    <!-- select picker -->
+    <!-- show / hide  education  type -->
+    <script>
+        // This function for main education
+        function toggleRow() {
+            var checkbox = document.getElementById('inlineCheckbox1');
+            var hiddenRow = document.getElementById('mainEducation');
+
+            if (checkbox.checked) {
+                // Show the hidden row
+                hiddenRow.classList.remove('main_education');
+            } else {
+                // Hide and remove the row
+                hiddenRow.classList.add('main_education');
+            }
+        }
+        // This function for Unversity education
+        function toggleUniversity() {
+            var checkbox2 = document.getElementById('inlineCheckbox2');
+            var hiddenRow2 = document.getElementById('universityEducation');
+
+            if (checkbox2.checked) {
+                // Show the hidden row
+                hiddenRow2.classList.remove('university_education');
+            } else {
+                // Hide and remove the row
+                hiddenRow2.classList.add('university_education');
+            }
+        }
+        // This function for free education
+        function toggleFree() {
+            var checkbox3 = document.getElementById('inlineCheckbox3');
+            var hiddenRow3 = document.getElementById('freeEducation');
+
+            if (checkbox3.checked) {
+                // Show the hidden row
+                hiddenRow3.classList.remove('free_education');
+            } else {
+                // Hide and remove the row
+                hiddenRow3.classList.add('free_education');
+            }
+        }
+    </script>
+    <!-- show main education -->
+    <!-- show / hide  course -->
+    <script>
+
+        function togglePrice() {
+            var checkbox = document.getElementById('inlineCheckbox5');
+            var hiddenRow = document.getElementById('coursePrice');
+
+            if (checkbox.checked) {
+                // Show the hidden row
+                hiddenRow.classList.remove('course_price');
+            } else {
+                // Hide and remove the row
+                hiddenRow.classList.add('course_price');
+            }
+        }
+    </script>
+    <!-- show / hide  course -->
+    <!-- upload file -->
+    <script>
+        $("form").on("change", ".file-upload-field", function () {
+            $(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
+        });
+    </script>
+    <!-- upload file -->
+</body>
+
+</html>
