@@ -136,13 +136,7 @@
                 <div class="container">
                     <!-- header section -->
                     <div class="main_topic course_main_topic">
-                        <h4>الطلاب</h4>
-                        <div class="button">
-                            <a class="btn second" href="#">Import excel sheet </a>
-                            <a class="btn second" href="#">export excel sheet</a>
-                            <a class="btn first" href="add-newstudent.html"> <i class="bi bi-plus"></i> طالب جديد </a>
-                        </div>
-
+                        <h4>اضافة الطالب الي كورس</h4>
                     </div>
                     <!-- search and filter section -->
                     <div class="row">
@@ -151,7 +145,7 @@
                                 <form>
                                     <div class="input-group">
                                         <input class="form-control" type="text"
-                                            placeholder=" ابحث بإسم الطالب او رقم الهاتف">
+                                            placeholder="ابحث بإسم الكورس او الكود التعريفي  ">
                                         <span class="icon_search"><i class="bi bi-search"></i></span>
                                     </div>
                                 </form>
@@ -323,59 +317,38 @@
                         <table class="table-responsive table_topic">
                             <thead>
                                 <tr>
-                                    <td></td>
-                                    <td>اسم </td>
-                                    <td> رقم الهاتف</td>
-                                    <td>الكود التسلسلي</td>
-                                    <td> المرحلة التعليمية</td>
-                                    <td> تاريخ الانضمام</td>
+
+                                    <td>اسم الكورس </td>
+                                    <td> سعر الكورس</td>
+                                    <td> الجامعة</td>
+                                    <td> عدد الحصص</td>
+                                    <td> عدد الطلاب</td>
                                     <td></td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </td>
 
                                     <td>
-                                        أحمد محسن
-
+                                        <h5>اساسيات المحاسبة المالية</h5>
+                                        <h6>مادة المحاسبة المالية</h6>
                                     </td>
-                                    <td>0123654887</td>
-                                    <td>#20255</td>
-                                    <td>الفرقة الاولى , حاسبات ومعلومات</td>
-                                    <td>22 مايو, 2023 </td>
+                                    <td>250 ج.م</td>
+                                    <td>طنطا, كلية تجارة</td>
+                                    <td>22 حصة </td>
+                                    <td>320 طالب </td>
 
                                     <td class="button">
-                                        <a class="btn show" href="detials-newstudent.html"> <i
-                                                class="bi bi-eye"></i></a>
-                                        <a class="btn edit" href="edit-newstudent.html"> <i
-                                                class="bi bi-pencil"></i></a>
-                                        <button class="btn block" href="#"> <i class="bi bi-slash-circle"></i></button>
-                                        <button onclick="deleteion()" class="btn delete" href="#"> <i
-                                                class="bi bi-trash3"></i></button>
+                                        <button onclick="addCourse()" class="btn first" type="button">
+                                            + اضافة الي الكورس</button>
+
 
                                     </td>
                                 </tr>
 
                             </tbody>
                         </table>
-                        <!-- filter student section -->
-                        <div class="filter_chose">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-2 col-12">
-                                    <h6>لقد قمت بتحديد 2 طالب</h6>
-                                </div>
-                                <div class="col-lg-8 col-md-10 col-12">
-                                    <div class="button">
-                                        <a href="add-student-course.html" class="btn first">اضف الطلاب الي كورس </a>
-                                        <button class="block btn">حذف البيانات</button>
-                                        <button class="delete btn"> تسجيل خروج</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- filter student section -->
+
                         <!-- pagination -->
                         <nav class="pagination_section">
                             <ul class="pagination justify-content-center">
@@ -413,7 +386,27 @@
 
 
     <!-- sweet alert for delete -->
- 
+    <script>
+        function addCourse() {
+            // Display the SweetAlert confirmation dialog
+            swal({
+                title: 'هل أنت متأكد من رغبتك في أضافه هذا الكورس',
+                text: 'سيتم اللأضافه !',
+                icon: 'sucess',
+                buttons: ['إلغاء', 'نعم, قم بالأضافة'],
+                dangerMode: true,
+            }).then(function (result) {
+                // Check if the user clicked the confirm button
+                if (result) {
+                    // Call the deletion function or perform the deletion action here
+                    // ...
+                    // For demonstration purposes, let's show another SweetAlert indicating successful deletion
+                    swal('تم الأضافة!', 'تم الأضافة  بنجاح.', 'success');
+                }
+            });
+        }
+
+    </script>
     <!-- show filter  -->
     <script>
         function handleOptionSelected(selectedOption) {

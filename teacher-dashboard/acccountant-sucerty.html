@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> اعدادات الأمان</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../main-scss/main.min.css" />
+    <link rel="stylesheet" href="scss/main.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
+
+    <!-- responsive -->
+    <!-- data table -->
+    <!-- data table -->
+    <!-- ? Favicon -->
+    <link rel="icon" href="../image/logo.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+        <!---------------------- start sidebar -------------------------------------------->
+
+        <section class="sidebar open">
+            <ul class="
+          nav nav-pills
+          flex-column
+          mb-sm-auto mb-0
+          align-items-center align-items-sm-start
+        " id="menu">
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="../image/icon-home.png" alt="icon" />
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="assistants.html" class="nav-link align-middle">
+                        <img src="../image/icon-assis.png" alt="icon" />
+                        <span>المساعدين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link align-middle">
+                        <img src="../image/icon-video.png" alt="icon" />
+                        <span> الكورسات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="students.html" class="nav-link align-middle">
+                        <img src="../image/icon-people.png" alt="icon" />
+                        <span>الطلاب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notfication.html" class="nav-link align-middle">
+                        <img src="../image/icon-notification-bing.png" alt="icon" />
+                        <span>الاشعارات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-security.png" alt="icon" />
+                        <span> اعدادات الامان</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
+                        <img src="../image/icon-login.png" alt="icon" />
+                        <span> تسجيل الخروج</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+        <!---------------------- end sidebar -------------------------------------------->
+        <!---------------------- start main content -------------------------------------------->
+
+        <section class="index_cards">
+            <!---------------------- start nav -------------------------------------------->
+            <nav class="nav_top navbar">
+                <div class="container">
+                    <div class="menu">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <div class="info">
+                        <div class="notfication">
+                            <i class="bi bi-bell"></i>
+                            <span class="alerts">
+                                3
+                            </span>
+                        </div>
+                        <div class="img">
+                            <img src="../image/person.png" alt="person">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </nav>
+            <!---------------------- finish nav -------------------------------------------->
+            <!---------------------- start content -------------------------------------------->
+            <div class="content_page">
+                <div class="container">
+                    <!-- header section -->
+                    <div class="main_topic">
+                        <h4> اعدادات الامان</h4>
+                    </div>
+                    <form class="form_topic">
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> مشاهدة الفيديوهات</label>
+                                    <div class="form-check form-check-inline">
+                                        <input  onchange="toggleVedio()" class="form-check-input" type="checkbox" id="inlineCheckbox4"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1"> محدود</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2"> غير محدود</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <div class="course_price" id="vedioLimit">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label">  عدد المشاهدة</label>
+                                        <input type="text" class="form-control">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                         <!-- start input -->
+                         <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label">  كود الفيديوهات</label>
+                                    <div class="form-check form-check-inline">
+                                        <input  onchange="toggleCode()" class="form-check-input" type="checkbox" id="inlineCheckbox6"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1"> اظهار</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox7"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">  اخفاء</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <div class="course_price" id="ShowCode">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label">   نوع الكود</label>
+                                        <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                            data-icon="bi bi-trash" data-live-search="true">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="button" 
+                                    class="btn first">الاضافة والحفظ</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+            <!---------------------- finish  content -------------------------------------------->
+
+        </section>
+        <!---------------------- finish main content -------------------------------------------->
+
+    </main>
+
+
+
+    <!-- main js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- main js -->
+
+    <!-- show / hide  vedio limit -->
+    <script>
+
+        function toggleVedio() {
+            var checkbox = document.getElementById('inlineCheckbox4');
+            var hiddenRow = document.getElementById('vedioLimit');
+
+            if (checkbox.checked) {
+                // Show the hidden row
+                hiddenRow.classList.remove('course_price');
+            } else {
+                // Hide and remove the row
+                hiddenRow.classList.add('course_price');
+            }
+        }
+    </script>
+    <!-- show / hide  vedio limit -->
+
+     <!-- show / hide  vedio limit -->
+     <script>
+
+        function toggleCode() {
+            var checkbox = document.getElementById('inlineCheckbox6');
+            var hiddenRow = document.getElementById('ShowCode');
+
+            if (checkbox.checked) {
+                // Show the hidden row
+                hiddenRow.classList.remove('course_price');
+            } else {
+                // Hide and remove the row
+                hiddenRow.classList.add('course_price');
+            }
+        }
+    </script>
+    <!-- show / hide  vedio limit -->
+
+    
+
+</body>
+
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> الكورس</title>
+    <title> الطلاب</title>
     <!-- main css -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
@@ -136,64 +136,49 @@
                 <div class="container">
                     <!-- header section -->
                     <div class="main_topic">
-                        <h4> اضافة ملف pdf جديد</h4>
+                        <h4> تفاصيل الطالب / سجل المشاهدات </h4>
                     </div>
 
-                    <form class="form_topic">
+                    <div class="row">
+                        <table class="table-responsive table_topic">
+                            <thead>
+                                <tr>
+
+                                    <td>  وقت الدخول </td>
+                                    <td> وقت الخروج</td>
+                                    <td> المدة التى قضاها</td>
+                                    <td>  مدة المشاهدة</td>
+                                 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        8:30:30 م
+                                    </td>
+                                    <td>8:30:30 م</td>
+                                    <td>5:00 دقائق  </td>
+                                    <td>30 ثانية</td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+
+                        <!-- pagination -->
+                        <nav class="pagination_section">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                        <!-- pagination -->
+                    </div>
 
 
-                        <!-- start input -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="input-group">
-                                    <label class="form-label"> حالة الملف</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4"
-                                            value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1"> مجاني</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5"
-                                            value="option2" onchange="togglePrice()">
-                                        <label class="form-check-label" for="inlineCheckbox2"> مدفوع</label>
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-                        <!-- finish input -->
-                        <div class="course_price" id="coursePrice">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="input-group">
-                                        <label class="form-label"> سعر الحصة</label>
-                                        <input type="text" class="form-control">
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- start input -->
-                        <div class="row">
-                            <div class="input-group pt-4">
-                                <div class="file-upload-wrapper"
-                                    data-text="اسحب الملف التى تريد اضافته  او قم بفتحها من هنا">
-                                    <input required name="file-upload-field form-control" type="file"
-                                        class="file-upload-field" value="" />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- finish input -->
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <button type="button" 
-                                    class="btn first">الاضافة والحفظ</button>
-                            </div>
-                        </div>
-
-                    </form>
                 </div>
 
 
@@ -206,39 +191,12 @@
     </main>
 
 
-
     <!-- main js -->
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
     <script src="../js/main.js"></script>
     <!-- main js -->
-
-
-    <!-- show / hide  course price -->
-    <script>
-
-        function togglePrice() {
-            var checkbox = document.getElementById('inlineCheckbox5');
-            var hiddenRow = document.getElementById('coursePrice');
-
-            if (checkbox.checked) {
-                // Show the hidden row
-                hiddenRow.classList.remove('course_price');
-            } else {
-                // Hide and remove the row
-                hiddenRow.classList.add('course_price');
-            }
-        }
-    </script>
-    <!-- show / hide  course price -->
-    <!-- upload file -->
-    <script>
-        $("form").on("change", ".file-upload-field", function () {
-            $(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
-        });
-    </script>
-    <!-- upload file -->
 
 </body>
 

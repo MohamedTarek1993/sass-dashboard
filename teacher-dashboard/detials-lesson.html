@@ -145,7 +145,7 @@
                             <span onclick="toggleMenu('drop-menu-info')"><i class="bi bi-three-dots"></i></span>
                         </div>
                         <ul id="drop-menu-info" class="drop_menu_info">
-                            <li><a href="edit-lesson.html">تعديل البيانات</a></li>
+                            <li><a href="#"> ألغاء تفعيل</a></li>
                             <li><a onclick="deleteion()"> حذف الحصة</a></li>
                         </ul>
                     </header>
@@ -155,7 +155,7 @@
                         <div class="row">
                             <div class="content">
                                 <div class="img">
-                                    <img src="../image/person.png" alt="person">
+                                    <img src="../image/lesson-image.png" alt="person">
                                 </div>
                                 <h2> اساسيات المحاسبة المالية</h2>
 
@@ -175,7 +175,7 @@
                     </div>
 
                     <!-- tabs section -->
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <ul class="nav nav_topic nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
@@ -221,13 +221,13 @@
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-12">
                                     <div class="button">
-                                        <a class="btn first" href="add-student.html"> <i class="bi bi-plus"></i>
+                                        <a class="btn first" href="add-pdf.html"> <i class="bi bi-plus"></i>
                                             ملف pdf جديد </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-2 col-md-4 col-12">
                                     <div class="button">
-                                        <a class="btn first" href="add-student.html"> <i class="bi bi-plus"></i>
+                                        <a class="btn first" href="add-vedio.html"> <i class="bi bi-plus"></i>
                                             فيديو جديد </a>
                                     </div>
                                 </div>
@@ -246,6 +246,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <!-- if vedio is exist -->
                                     <tr>
                                         <td>1</td>
                                         <td>
@@ -259,10 +260,8 @@
                                         </td>
 
                                         <td class="button">
-                                            <a class="btn show" href="detials-course.html"> <i
-                                                    class="bi bi-eye"></i></a>
-                                            <a class="btn edit" href="edit-lesson.html"> <i
-                                                    class="bi bi-pencil"></i></a>
+                                            <a class="btn show" href="#"> <i class="bi bi-eye"></i></a>
+                                            <a class="btn edit" href="edit-vedio.html"> <i class="bi bi-pencil"></i></a>
                                             <button class="btn block" href="#"> <i
                                                     class="bi bi-slash-circle"></i></button>
                                             <button onclick="deleteion()" class="btn delete" href="#">
@@ -270,10 +269,47 @@
 
                                         </td>
                                     </tr>
+                                    <!-- if vedio is exist -->
+                                    <!-- if pdf is exist -->
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            اساسيات المحاسبة المالية
+                                        </td>
+                                        <td>Pdf</td>
+                                        <td>مدفوع </td>
+                                        <td>
+                                            <a href="../image/screencapture-pickupapp-net-blogs-2022-12-27-23_17_24.pdf"
+                                                target="_blank">www.onlinecourse/ exam1 / session2.com</a>
+
+                                        </td>
+
+                                        <td class="button">
+                                            <a class="btn show" href="#"> <i class="bi bi-eye"></i></a>
+                                            <a class="btn edit" href="edit-pdf.html"> <i class="bi bi-pencil"></i></a>
+                                            <button class="btn block" href="#"> <i
+                                                    class="bi bi-slash-circle"></i></button>
+                                            <button onclick="deleteion()" class="btn delete" href="#">
+                                                <i class="bi bi-box-arrow-left"></i></button>
+
+                                        </td>
+                                    </tr>
+                                    <!-- if pdf is exist -->
+
 
                                 </tbody>
                             </table>
-
+                            <!-- pagination -->
+                            <nav class="pagination_section">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                            <!-- pagination -->
                         </div>
                         <!-- pdf section -->
                         <!-- work section -->
@@ -281,33 +317,21 @@
                             aria-labelledby="pills-profile-tab">
                             <!-- search and filter section -->
                             <div class="row">
-                                <div class="col-lg-8 col-md-6 col-12">
+                                <div class="col-lg-10 col-md-8 col-12">
                                     <div class="search_topic">
                                         <form>
                                             <div class="input-group">
-                                                <input class="form-control" type="text" placeholder=" ابحث بإسم الحصة">
+                                                <input class="form-control" type="text" placeholder=" ابحث بإسم الواجب">
                                                 <span class="icon_search"><i class="bi bi-search"></i></span>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-md-3 col-12">
-                                    <div class="dropdown dropdown_filter">
-                                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            حالة الحصة
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                            <li><a class="dropdown-item" href="#">مدفوع</a></li>
-                                            <li><a class="dropdown-item" href="#">مجاناً </a></li>
 
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-3 col-12">
+                                <div class="col-lg-2 col-md-4 col-12">
                                     <div class="button">
-                                        <a class="btn first" href="add-lesson.html"> <i class="bi bi-plus"></i>
-                                            حصة جديدة </a>
+                                        <a class="btn first" href="add-homework.html"> <i class="bi bi-plus"></i>
+                                            واجب جديد </a>
                                     </div>
                                 </div>
                             </div>
@@ -315,11 +339,8 @@
                             <table class="table-responsive table_topic">
                                 <thead>
                                     <tr>
-                                        <td>اسم الحصة </td>
-                                        <td> الفيديوهات المُسجلة</td>
-                                        <td> ملفات pdf</td>
-                                        <td> حالة الحصة</td>
-
+                                        <td> اسم الواجب </td>
+                                        <td> الرابط</td>
                                         <td></td>
                                     </tr>
                                 </thead>
@@ -328,15 +349,13 @@
                                         <td>
                                             اساسيات المحاسبة المالية
                                         </td>
-                                        <td>25 فيديو</td>
-                                        <td>12 مذكرة </td>
-                                        <td>مدفوع </td>
+                                        <td>www.onlinecourse/ exam1 / session2.com </td>
 
                                         <td class="button">
-                                            <a class="btn show" href="detials-lesson.html"> <i
-                                                    class="bi bi-eye"></i></a>
-                                            <!-- <a class="btn edit" href="edit-lesson.html"> <i
-                                                        class="bi bi-pencil"></i></a> -->
+                                            <!-- <a class="btn show" href="detials-lesson.html"> <i
+                                                    class="bi bi-eye"></i></a> -->
+                                            <a class="btn edit" href="edit-homework.html"> <i
+                                                    class="bi bi-pencil"></i></a>
                                             <button class="btn block" href="#"> <i
                                                     class="bi bi-slash-circle"></i></button>
                                             <button onclick="deleteion()" class="btn delete" href="#">
@@ -347,16 +366,23 @@
 
                                 </tbody>
                             </table>
+                            <!-- pagination -->
+                            <nav class="pagination_section">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                            <!-- pagination -->
                         </div>
                         <!-- work section -->
 
                     </div>
                     <!-- tabs section -->
-
-
                 </div>
-
-
             </div>
             <!---------------------- finish  content -------------------------------------------->
 
