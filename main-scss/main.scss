@@ -2026,6 +2026,9 @@ form .file-upload-wrapper input {
 //card index
 .card_lists {
   padding: 5% 0;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  margin-top: 3%;
 
   .card_list {
     padding: 20px;
@@ -2072,4 +2075,28 @@ form .file-upload-wrapper input {
       }
     }
   }
+}
+.filter_index_table{
+  margin: 3% 0;
+  padding: 5% 0;
+  background-color: var(--color-white);
+  border-radius: 8px;
+
+  .bootstrap-select{
+border: unset;
+width: 71% !important;
+  color: var(--color-text);
+  }
+}
+.charts_section{
+  padding: 5% 0;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  margin-top: 3%;
+}
+.row_filter{
+  padding: 5% 0;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  margin-top: 3%;
 }
