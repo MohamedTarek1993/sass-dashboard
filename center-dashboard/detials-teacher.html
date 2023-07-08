@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> الكورسات</title>
+    <title> المدرسين</title>
     <!-- main css -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
@@ -142,7 +142,7 @@
                 <div class="container">
                     <!-- header section -->
                     <div class="main_topic">
-                        <h4> الكورسات / تفاصيل الكورس </h4>
+                        <h4> المدرسين / تفاصيل المدرس </h4>
                     </div>
 
                     <header class="header">
@@ -156,7 +156,7 @@
                             <span onclick="toggleMenu('drop-menu-info')"><i class="bi bi-three-dots"></i></span>
                         </div>
                         <ul id="drop-menu-info" class="drop_menu_info">
-                            <li><a href="edit-course.html">تعديل البيانات</a></li>
+                            <li><a href="edit-teacher.html">تعديل البيانات</a></li>
                             <li><a href="edit-assistant.html"> الغاء تفعيل</a></li>
                             <li><a onclick="deleteion()"> حذف الكورس</a></li>
                         </ul>
@@ -172,19 +172,23 @@
                         <div class="row">
                             <div class="content">
                                 <div class="img">
-                                    <img src="../image/lesson-image.png" alt="person">
+                                    <img src="../image/person.png" alt="person">
                                 </div>
-                                <h2> اساسيات المحاسبة المالية</h2>
+                                <h2> احمد فتحي</h2>
                                 <p> المحاسبة المالية</p>
                                 <ul>
-                                    <li><i class="bi bi-cash-coin"></i>سعر الكورس : <span>250 ج.م</span></li>
-                                    <li><i class="bi bi-calendar"></i>مدة الكورس :
-                                        <span>من 5-8-2022 حتي 5-8-2023</span>
+                                    <li> <i class="bi bi-telephone-fill"></i> رقم الهاتف : <span>01010101010</span></li>
+
+                                    <li> <i class="bi bi-geo-alt-fill"></i> الموقع الجغرافي :
+                                        <span>الدقهلية , المنصورة , ش المجزر</span>
                                     </li>
-                                    <li><i class="bi bi-card-checklist"></i>المرحلة التعليمية :
+                                    <li> <i class="bi bi-envelope-fill"></i> البريد الالكتروني :
                                         <span>
-                                            جامعي, خاص
+                                            username22@gmail.com
                                         </span>
+                                    </li>
+                                    <li> <i class="bi bi-bank"></i> المرحلة التعليمية :
+                                        <span> جامعي,خاص</span>
                                     </li>
                                     <li><i class="bi bi-card-checklist"></i> الفرقة :
                                         <span> الفرقة الاولي, ترم اول</span>
@@ -193,15 +197,21 @@
                                         <span> طنطا, كلية تجارة</span>
                                     </li>
                                     <li><i class="bi bi-briefcase"></i> القسم :
+                                        <span> 4 مواد</span>
+                                    </li>
+
+                                    <li> <i class="bi bi-wallet-fill"></i> المواد :
                                         <span> محاسبة</span>
                                     </li>
-                                    <li><i class="bi bi-tags"></i> وصف الكورس : :
-                                        <span> هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص
-                                            من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص
-                                            الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. هذا النص هو مثال لنص
-                                            يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
-                                            العربى.</span>
+
+                                    <li> <i class="bi bi-bullseye"></i> اجمالي الطلاب :
+                                        <span> 250 طالب</span>
                                     </li>
+
+                                    <li> <i class="bi bi-file-play"></i> اجمالي الكورسات :
+                                        <span> 52 كورس</span>
+                                    </li>
+
                                 </ul>
                             </div>
 
@@ -218,18 +228,9 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">الحصص (22)</button>
+                                aria-selected="false">الكورسات (52) </button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                                aria-selected="false">الدروس المباشرة (12)</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-message-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-message" type="button" role="tab" aria-controls="pills-message"
-                                aria-selected="false"> الامتحانات(12)</button>
-                        </li>
+
                     </ul>
 
                     <div class="tab-content" id="pills-tabContent">
@@ -277,9 +278,9 @@
                                         <td>22 مايو, 2023 </td>
 
                                         <td class="button">
-                                            <a class="btn show" href="detials-course.html"> <i
+                                            <a class="btn show" href="detials-student.html"> <i
                                                     class="bi bi-eye"></i></a>
-                                            <a class="btn edit" href="edit-course.html"> <i
+                                            <a class="btn edit" href="edit-student.html"> <i
                                                     class="bi bi-pencil"></i></a>
                                             <button class="btn block" href="#"> <i
                                                     class="bi bi-slash-circle"></i></button>
@@ -305,38 +306,24 @@
 
                         </div>
                         <!-- student section -->
-                        <!-- class section -->
+                        <!-- courses section -->
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                             aria-labelledby="pills-profile-tab">
-                            <!-- search and filter section -->
                             <div class="row">
-                                <div class="col-lg-8 col-md-6 col-12">
+                                <div class="col-lg-10 col-md-7 col-12">
                                     <div class="search_topic">
                                         <form>
                                             <div class="input-group">
-                                                <input class="form-control" type="text" placeholder=" ابحث بإسم الحصة">
+                                                <input class="form-control" type="text" placeholder=" ابحث بإسم الكورس">
                                                 <span class="icon_search"><i class="bi bi-search"></i></span>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-md-3 col-12">
-                                    <div class="dropdown dropdown_filter">
-                                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            حالة الحصة
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                            <li><a class="dropdown-item" href="#">مدفوع</a></li>
-                                            <li><a class="dropdown-item" href="#">مجاناً </a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-3 col-12">
+                                <div class="col-lg-2 col-md-5 col-12">
                                     <div class="button">
-                                        <a class="btn first" href="add-lesson.html"> <i class="bi bi-plus"></i>
-                                            حصة جديدة </a>
+                                        <a class="btn first" href="add-course.html"> <i class="bi bi-plus"></i> اضافة
+                                            كورس </a>
                                     </div>
                                 </div>
                             </div>
@@ -344,10 +331,11 @@
                             <table class="table-responsive table_topic">
                                 <thead>
                                     <tr>
-                                        <td>اسم الحصة </td>
-                                        <td> الفيديوهات المُسجلة</td>
-                                        <td> ملفات pdf</td>
-                                        <td> حالة الحصة</td>
+                                        <td>اسم الكورس </td>
+                                        <td> سعر الكورس</td>
+                                        <td> الجامعة</td>
+                                        <td> عدد الحصص</td>
+                                        <td>عدد الطلاب</td>
 
                                         <td></td>
                                     </tr>
@@ -355,105 +343,23 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            اساسيات المحاسبة المالية
+                                            <h6>اساسيات المحاسبة المالية</h6>
+                                            <h5>مادة المحاسبة المالية</h5>
                                         </td>
-                                        <td>25 فيديو</td>
-                                        <td>12 مذكرة </td>
-                                        <td>مدفوع </td>
+                                        <td>250 ج.م</td>
+                                        <td>طنطا, كلية تجارة </td>
+                                        <td>22 حصة </td>
+                                        <td>320 طالب</td>
 
                                         <td class="button">
-                                            <a class="btn show" href="detials-lesson.html"> <i
+                                            <a class="btn show" href="detials-course.html"> <i
                                                     class="bi bi-eye"></i></a>
-                                            <!-- <a class="btn edit" href="edit-lesson.html"> <i
-                                                        class="bi bi-pencil"></i></a> -->
-                                            <button class="btn block" href="#"> <i
-                                                    class="bi bi-slash-circle"></i></button>
-                                            <button onclick="deleteion()" class="btn delete" href="#">
-                                                <i class="bi bi-trash3"></i></button>
-
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                            <!-- pagination -->
-                            <nav class="pagination_section">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-                            <!-- pagination -->
-                        </div>
-                        <!-- class section -->
-                        <!-- lesson section -->
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
-                            aria-labelledby="pills-contact-tab">
-                            <!-- search and filter section -->
-                            <div class="row">
-                                <div class="col-lg-7 col-md-6 col-12">
-                                    <div class="search_topic">
-                                        <form>
-                                            <div class="input-group">
-                                                <input class="form-control" type="text"
-                                                    placeholder=" ابحث بإسم الدرس المباشر">
-                                                <span class="icon_search"><i class="bi bi-search"></i></span>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-3 col-12">
-                                    <div class="dropdown dropdown_filter">
-                                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            حالة الفيديو
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                            <li><a class="dropdown-item" href="#">مدفوع</a></li>
-                                            <li><a class="dropdown-item" href="#">مجاناً </a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-12">
-                                    <div class="button">
-                                        <a class="btn first" href="add-lessonlive.html"> <i class="bi bi-plus"></i>
-                                            درس مباشر جديد </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- table -->
-                            <table class="table-responsive table_topic">
-                                <thead>
-                                    <tr>
-                                        <td>اسم الدرس المُباشر </td>
-                                        <td> الحالة</td>
-                                        <td> الرابط </td>
-
-
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            اساسيات المحاسبة المالية
-                                        </td>
-                                        <td>مدفوع </td>
-                                        <td> <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
-                                                www.onlinecourse/ exam1 / session2.com</a></td>
-                                        <td class="button">
-                                            <!-- <a class="btn show" href="detiahtml"> <i
-                                                    class="bi bi-eye"></i></a> -->
-                                            <a class="btn edit" href="edit-lessonlive.html"> <i
+                                            <a class="btn edit" href="edit-course.html"> <i
                                                     class="bi bi-pencil"></i></a>
                                             <button class="btn block" href="#"> <i
                                                     class="bi bi-slash-circle"></i></button>
                                             <button onclick="deleteion()" class="btn delete" href="#">
-                                                <i class="bi bi-trash3"></i></button>
+                                                <i class="bi bi-box-arrow-left"></i></button>
 
                                         </td>
                                     </tr>
@@ -472,75 +378,8 @@
                             </nav>
                             <!-- pagination -->
                         </div>
-                        <!-- lesson section -->
-                        <!-- exams section -->
-                        <div class="tab-pane fade" id="pills-message" role="tabpanel"
-                            aria-labelledby="pills-message-tab">
-                            <!-- search and filter section -->
-                            <div class="row">
-                                <div class="col-lg-10 col-md-8 col-12">
-                                    <div class="search_topic">
-                                        <form>
-                                            <div class="input-group">
-                                                <input class="form-control" type="text"
-                                                    placeholder="ابحث بإسم الامتحان">
-                                                <span class="icon_search"><i class="bi bi-search"></i></span>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-12">
-                                    <div class="button">
-                                        <a class="btn first" href="add-exam.html"> <i class="bi bi-plus"></i>
-                                            امتحان جديد </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- table -->
-                            <table class="table-responsive table_topic">
-                                <thead>
-                                    <tr>
-                                        <td> اسم الامتحان </td>
+                        <!-- courses section -->
 
-                                        <td> الرابط </td>
-
-
-                                        <td></td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            اساسيات المحاسبة المالية
-                                        </td>
-
-                                        <td> <a href="#">
-                                                www.onlinecourse/ exam1 / session2.com</a></td>
-                                        <td class="button">
-                                            <!-- <a class="btn show" href="detiahtml"> <i
-                                                class="bi bi-eye"></i></a> -->
-                                            <a class="btn edit" href="edit-exam.html"> <i class="bi bi-pencil"></i></a>
-                                            <button class="btn block" href="#"> <i
-                                                    class="bi bi-slash-circle"></i></button>
-                                            <button onclick="deleteion()" class="btn delete" href="#">
-                                                <i class="bi bi-trash3"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!-- pagination -->
-                            <nav class="pagination_section">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-                            <!-- pagination -->
-                        </div>
-                        <!-- exams section -->
                     </div>
                     <!-- tabs section -->
                 </div>

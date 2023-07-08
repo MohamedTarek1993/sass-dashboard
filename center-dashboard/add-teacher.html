@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> الاشعارات</title>
+    <title> المدرس</title>
     <!-- main css -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
@@ -96,7 +96,7 @@
                         <span> تسجيل الخروج</span>
                     </a>
                 </li>
-        
+
             </ul>
         </section>
         <!---------------------- end sidebar -------------------------------------------->
@@ -142,30 +142,98 @@
                 <div class="container">
                     <!-- header section -->
                     <div class="main_topic">
-                        <h4>   تعديل الأشعار</h4>
-
+                        <h4> اضافة مدرس جديد</h4>
                     </div>
+
                     <form class="form_topic">
                         <!-- start input -->
+                        <div class="input-group input-group-upload">
+                            <img id="current-image" class="profile-image" src="../image/upload.png" alt="Profile Image">
+                            <div class="upload-icon" id="upload-icon">
+                                <i class="bi bi-camera-fill"></i>
+                            </div>
+
+                            <input id="image-input" class="hidden" type="file" accept="image/*">
+                        </div>
+                        <!-- start input -->
+                        <!-- start input -->
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-lg-6 col-12">
                                 <div class="input-group">
-                                    <label class="form-label"> عنوان الاشعار</label>
-                                    <input required type="text" placeholder="اكتب عنوان الاشعار" class="form-control">
+                                    <label class="form-label"> الاسم بالكامل </label>
+                                    <input required type="text" placeholder="اكتب اسم " class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> تاريخ الميلاد </label>
+                                    <input required type="date" placeholder="اكتب اسم الكورس" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- start input -->
+
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> رقم الجوال </label>
+                                    <input required type="tel" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> البريد الالكتروني </label>
+                                    <input required type="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- start input -->
+
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> المحافظة </label>
+                                    <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                        data-icon="bi bi-trash" data-live-search="true">
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> المدينة </label>
+                                    <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                        data-icon="bi bi-trash" data-live-search="true">
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <!-- finish input -->
+
                         <!-- start input -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <label class="form-label"> وصف الاشعار</label>
-                                    <textarea class="form-control" placeholder="ادخل وصف الاشعار"></textarea>
+                                    <label class="form-label"> المنطقة</label>
+                                    <input type="text" class="form-control">
+
                                 </div>
                             </div>
+
                         </div>
                         <!-- finish input -->
+
+
                         <!-- start input -->
                         <div class="row">
                             <div class="col-12">
@@ -369,16 +437,51 @@
                             </div>
                         </div>
                         <!-- free education -->
+                        <!-- start input -->
                         <div class="row">
-                            <div class="col-lg-6">
-                                <button type="button"
-                                    class="btn first"> تعديل</button>
+                            <div class="input-group pt-4">
+                                <label class="form-label"> ارفاق فيديو مقدمة للمدرس </label>
+                                <div class="file-upload-wrapper"
+                                    data-text="اسحب الفيديو التى تريد اضافتها  او قم بفتحها من هنا">
+                                    <input required name="file-upload-field form-control" type="file"
+                                        class="file-upload-field" value="" />
+                                </div>
                             </div>
                         </div>
+                        <!-- finish input -->
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> وصف المدرس</label>
+                                    <textarea class="form-control" placeholder="  ادخل شرح المدرس"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> كلمة المرور</label>
+                                    <input required id="password" type="password" placeholder=" ادخل كلمة المرور"
+                                        class="form-control">
+                                    <span class="lock-icon" onclick="togglePasswordVisibility()">
+                                        <i id="lockIcon" class="bi bi-eye"></i>
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    class="btn first">الاضافة والحفظ</button>
+                            </div>
+                        </div>
+
                     </form>
-
-
-
                 </div>
 
 
@@ -390,6 +493,31 @@
 
     </main>
 
+    <!---------------------- modal -------------------------------------------->
+
+    <div class="modal modal_assistant fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="content">
+                        <h4> تم اضافة المدرس بنجاح الى قائمة المدرسين </h4>
+                        <p>لقد قمت الآن باضافة المدرس الى قائمة المدرسين لديك ويمكنك التعديل على البيانات فيما بعد</p>
+                        <div class="button">
+                            <a href="detials-teacher.html" class="btn first">عرض التفاصيل </a>
+                            <a href="edit-teacher.html" class="btn second">تعديل البيانات</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!---------------------- modal -------------------------------------------->
 
     <!-- main js -->
     <script src="../js/jquery-3.7.1.min.js"></script>
@@ -397,6 +525,38 @@
     <script src="../js/bootstrap-select.min.js"></script>
     <script src="../js/main.js"></script>
     <!-- main js -->
+    <!-- upload image -->
+    <script>
+        const currentImage = document.getElementById("current-image");
+        const uploadIcon = document.getElementById("upload-icon");
+        const imageInput = document.getElementById("image-input");
+
+        uploadIcon.addEventListener("click", () => {
+            imageInput.click();
+        });
+
+        imageInput.addEventListener("change", handleImageUpload);
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                currentImage.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+    </script>
+    <!-- upload image -->
+    <!-- select picker -->
+    <script>
+        $(document).ready(function () {
+            $('.form-select').selectpicker();
+        });
+
+    </script>
+    <!-- select picker -->
     <!-- show / hide  education  type -->
     <script>
         // This function for main education
@@ -441,6 +601,32 @@
     </script>
     <!-- show main education -->
 
+    <!-- upload file -->
+    <script>
+        $("form").on("change", ".file-upload-field", function () {
+            $(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
+        });
+    </script>
+    <!-- upload file -->
+
+    <!-- show / hide password -->
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var lockIcon = document.getElementById("lockIcon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                lockIcon.classList.remove("bi-eye");
+                lockIcon.classList.add("bi-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                lockIcon.classList.remove("bi-eye-slash");
+                lockIcon.classList.add("bi-eye");
+            }
+        }
+    </script>
+    <!-- show / hide password -->
 </body>
 
 </html>
