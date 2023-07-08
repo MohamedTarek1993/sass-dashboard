@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> الطلاب</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../main-scss/main.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="scss/main.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
+
+    <!-- responsive -->
+    <!-- data table -->
+    <!-- data table -->
+    <!-- ? Favicon -->
+    <link rel="icon" href="../image/logo.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+        <!---------------------- start sidebar -------------------------------------------->
+
+        <section class="sidebar open">
+            <ul class="
+          nav nav-pills
+          flex-column
+          mb-sm-auto mb-0
+          align-items-center align-items-sm-start
+        " id="menu">
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="../image/icon-home.png" alt="icon" />
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="assistants.html" class="nav-link align-middle">
+                        <img src="../image/icon-assis.png" alt="icon" />
+                        <span>المساعدين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link align-middle">
+                        <img src="../image/icon-video.png" alt="icon" />
+                        <span> الكورسات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="students.html" class="nav-link align-middle">
+                        <img src="../image/icon-people.png" alt="icon" />
+                        <span>الطلاب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notfication.html" class="nav-link align-middle">
+                        <img src="../image/icon-notification-bing.png" alt="icon" />
+                        <span>الاشعارات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-security.png" alt="icon" />
+                        <span> اعدادات الامان</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
+                        <img src="../image/icon-login.png" alt="icon" />
+                        <span> تسجيل الخروج</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+        <!---------------------- end sidebar -------------------------------------------->
+        <!---------------------- start main content -------------------------------------------->
+
+        <section class="index_cards">
+            <!---------------------- start nav -------------------------------------------->
+            <nav class="nav_top navbar">
+                <div class="container">
+                    <div class="menu">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <div class="info">
+                        <div class="notfication">
+                            <i class="bi bi-bell"></i>
+                            <span class="alerts">
+                                3
+                            </span>
+                        </div>
+                        <div class="img">
+                            <img src="../image/person.png" alt="person">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </nav>
+            <!---------------------- finish nav -------------------------------------------->
+            <!---------------------- start content -------------------------------------------->
+            <div class="content_page">
+                <div class="container">
+                    <!-- header section -->
+                    <div class="main_topic course_main_topic">
+                        <h4>الطلاب</h4>
+                        <div class="button">
+                            <a class="btn second" href="#">Import excel sheet </a>
+                            <a class="btn second" href="#">export excel sheet</a>
+                            <a class="btn first" href="add-newstudent.html"> <i class="bi bi-plus"></i> طالب جديد </a>
+                        </div>
+
+                    </div>
+                    <!-- search and filter section -->
+                    <div class="row">
+                        <div class="col-lg-9 col-12">
+                            <div class="search_topic">
+                                <form>
+                                    <div class="input-group">
+                                        <input class="form-control" type="text"
+                                            placeholder=" ابحث بإسم الطالب او رقم الهاتف">
+                                        <span class="icon_search"><i class="bi bi-search"></i></span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-12">
+                            <div class="dropdown dropdown_filter">
+                                <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    جميع المراحل التعليمية
+                                </button>
+                                <ul id="education-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="handleOptionSelected('جامعي')">جامعي</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="handleOptionSelected('أساسي')">أساسي
+                                        </a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="handleOptionSelected('حر')">حر </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- main education -->
+                    <div id="main-education-filter" class="main_education_filter courser_filter">
+                        <form class="form_topic">
+                            <!-- input group -->
+                            <div class="input-group">
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="الصلاحيات">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <div class="input-group">
+
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true"
+                                    data-placeholder="المرحله التعليمية">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <!-- input group -->
+                            <div class="input-group">
+
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="الصف الدراسي">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <!-- input group -->
+                            <div class="input-group">
+
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="المواد">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                        </form>
+                    </div>
+                    <!-- main education -->
+
+                    <!-- unversity education -->
+                    <div id="unversity-education-filter" class="unversity_education_filter courser_filter">
+                        <form class="form_topic">
+                            <!-- input group -->
+                            <div class="input-group">
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="المستوي التعليمي">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <div class="input-group">
+
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder=" الجامعة">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <!-- input group -->
+                            <div class="input-group">
+
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder=" الكلية">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <!-- input group -->
+                            <div class="input-group">
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="الفرق">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <!-- input group -->
+                            <div class="input-group">
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="القسم">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <!-- input group -->
+                            <div class="input-group">
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="المواد">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                        </form>
+                    </div>
+                    <!-- main education -->
+
+                    <!-- free education -->
+                    <div id="free-education-filter" class="free_education_filter courser_filter">
+                        <form class="form_topic">
+                            <!-- input group -->
+                            <div class="input-group">
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="القسم">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                            <div class="input-group">
+                                <select required class="selectpicker" multiple data-selected-text-format="count > 1"
+                                    data-icon="bi bi-trash" data-live-search="true" data-placeholder="التخصص">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <!-- input group -->
+                        </form>
+                    </div>
+                    <!-- free education -->
+                    <!-- list section -->
+                    <div class="row">
+                        <table class="table-responsive table_topic">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>اسم </td>
+                                    <td> رقم الهاتف</td>
+                                    <td>الكود التسلسلي</td>
+                                    <td> المرحلة التعليمية</td>
+                                    <td> تاريخ الانضمام</td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    </td>
+
+                                    <td>
+                                        أحمد محسن
+
+                                    </td>
+                                    <td>0123654887</td>
+                                    <td>#20255</td>
+                                    <td>الفرقة الاولى , حاسبات ومعلومات</td>
+                                    <td>22 مايو, 2023 </td>
+
+                                    <td class="button">
+                                        <a class="btn show" href="detials-newstudent.html"> <i
+                                                class="bi bi-eye"></i></a>
+                                        <a class="btn edit" href="edit-newstudent.html"> <i
+                                                class="bi bi-pencil"></i></a>
+                                        <button class="btn block" href="#"> <i class="bi bi-slash-circle"></i></button>
+                                        <button onclick="deleteion()" class="btn delete" href="#"> <i
+                                                class="bi bi-trash3"></i></button>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <!-- filter student section -->
+                        <div class="filter_chose">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-2 col-12">
+                                    <h6>لقد قمت بتحديد 2 طالب</h6>
+                                </div>
+                                <div class="col-lg-8 col-md-10 col-12">
+                                    <div class="button">
+                                        <a href="add-student-course.html" class="btn first">اضف الطلاب الي كورس </a>
+                                        <button class="block btn">حذف البيانات</button>
+                                        <button class="delete btn"> تسجيل خروج</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- filter student section -->
+                        <!-- pagination -->
+                        <nav class="pagination_section">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                        <!-- pagination -->
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!---------------------- finish  content -------------------------------------------->
+
+        </section>
+        <!---------------------- finish main content -------------------------------------------->
+
+    </main>
+
+
+    <!---------------------- finish footer -------------------------------------------->
+
+    <!-- main js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- main js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <!-- sweet alert for delete -->
+ 
+    <!-- show filter  -->
+    <script>
+        function handleOptionSelected(selectedOption) {
+            var mainEducationFilter = document.getElementById('main-education-filter');
+            var unvesityEducationFilter = document.getElementById('unversity-education-filter');
+            var freeEducationFilter = document.getElementById('free-education-filter');
+            if (selectedOption === 'جامعي') {
+                mainEducationFilter.style.display = 'block';
+            } else {
+                mainEducationFilter.style.display = 'none';
+            }
+            if (selectedOption === 'أساسي') {
+                unvesityEducationFilter.style.display = 'block';
+            } else {
+                unvesityEducationFilter.style.display = 'none';
+            }
+            if (selectedOption === 'حر') {
+                freeEducationFilter.style.display = 'block';
+            } else {
+                freeEducationFilter.style.display = 'none';
+            }
+
+        }
+    </script>
+    <!-- show filter  -->
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> الكورس</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../main-scss/main.min.css" />
+    <link rel="stylesheet" href="scss/main.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
+
+    <!-- responsive -->
+    <!-- data table -->
+    <!-- data table -->
+    <!-- ? Favicon -->
+    <link rel="icon" href="../image/logo.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+        <!---------------------- start sidebar -------------------------------------------->
+
+        <section class="sidebar open">
+            <ul class="
+          nav nav-pills
+          flex-column
+          mb-sm-auto mb-0
+          align-items-center align-items-sm-start
+        " id="menu">
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="../image/icon-home.png" alt="icon" />
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="assistants.html" class="nav-link align-middle">
+                        <img src="../image/icon-assis.png" alt="icon" />
+                        <span>المساعدين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link align-middle">
+                        <img src="../image/icon-video.png" alt="icon" />
+                        <span> الكورسات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="students.html" class="nav-link align-middle">
+                        <img src="../image/icon-people.png" alt="icon" />
+                        <span>الطلاب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notfication.html" class="nav-link align-middle">
+                        <img src="../image/icon-notification-bing.png" alt="icon" />
+                        <span>الاشعارات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-security.png" alt="icon" />
+                        <span> اعدادات الامان</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
+                        <img src="../image/icon-login.png" alt="icon" />
+                        <span> تسجيل الخروج</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+        <!---------------------- end sidebar -------------------------------------------->
+        <!---------------------- start main content -------------------------------------------->
+
+        <section class="index_cards">
+            <!---------------------- start nav -------------------------------------------->
+            <nav class="nav_top navbar">
+                <div class="container">
+                    <div class="menu">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <div class="info">
+                        <div class="notfication">
+                            <i class="bi bi-bell"></i>
+                            <span class="alerts">
+                                3
+                            </span>
+                        </div>
+                        <div class="img">
+                            <img src="../image/person.png" alt="person">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </nav>
+            <!---------------------- finish nav -------------------------------------------->
+            <!---------------------- start content -------------------------------------------->
+            <div class="content_page">
+                <div class="container">
+                    <!-- header section -->
+                    <div class="main_topic">
+                        <h4>   اضافة واجب جديد </h4>
+                    </div>
+
+                    <form class="form_topic">
+
+
+                    
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label">  اسم الواجب</label>
+                                    <input required type="text" class="form-control" placeholder=" اكتب اسم الواجب ">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+
+                        <!-- start input -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label"> لينك الواجب </label>
+                                    <input required type="url" class="form-control" placeholder="ادخل لينك الواجل">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish input -->
+
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="button" 
+                                    class="btn first">الاضافة والحفظ</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <!---------------------- finish  content -------------------------------------------->
+
+        </section>
+        <!---------------------- finish main content -------------------------------------------->
+
+    </main>
+
+
+
+    <!-- main js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- main js -->
+
+
+
+</body>
+
+</html>

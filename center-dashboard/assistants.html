@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> المساعدين</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../main-scss/main.min.css" />
+    <link rel="stylesheet" href="scss/main.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
+
+    <!-- responsive -->
+    <!-- data table -->
+    <!-- data table -->
+    <!-- ? Favicon -->
+    <link rel="icon" href="./image/Icon-black.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body>
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+        <!---------------------- start sidebar -------------------------------------------->
+
+        <section class="sidebar open">
+            <ul class="
+          nav nav-pills nav_sidebar
+          flex-column
+          mb-sm-auto mb-0
+          align-items-center align-items-sm-start
+        " id="menu">
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="../image/icon-home.png" alt="icon" />
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="assistants.html" class="nav-link align-middle">
+                        <img src="../image/icon-assis.png" alt="icon" />
+                        <span>المساعدين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link align-middle">
+                        <img src="../image/icon-video.png" alt="icon" />
+                        <span> الكورسات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="students.html" class="nav-link align-middle">
+                        <img src="../image/icon-people.png" alt="icon" />
+                        <span>الطلاب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notfication.html" class="nav-link align-middle">
+                        <img src="../image/icon-notification-bing.png" alt="icon" />
+                        <span>الاشعارات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-security.png" alt="icon" />
+                        <span> اعدادات الامان</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
+                        <img src="../image/icon-login.png" alt="icon" />
+                        <span> تسجيل الخروج</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+        <!---------------------- end sidebar -------------------------------------------->
+        <!---------------------- start main content -------------------------------------------->
+
+        <section class="index_cards">
+            <!---------------------- start nav -------------------------------------------->
+            <nav class="nav_top navbar">
+                <div class="container">
+                    <div class="menu">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <div class="info">
+                        <div class="notfication">
+                            <i class="bi bi-bell"></i>
+                            <span class="alerts">
+                                3
+                            </span>
+                        </div>
+                        <div class="img">
+                            <img src="../image/person.png" alt="person">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </nav>
+            <!---------------------- finish nav -------------------------------------------->
+            <!---------------------- start content -------------------------------------------->
+            <div class="content_page">
+                <div class="container">
+                    <!-- header section -->
+                    <div class="main_topic">
+                        <h4>المساعدين</h4>
+                        <a class="btn first" href="add-assistant.html"> <i class="bi bi-plus"></i> مساعد جديد </a>
+                    </div>
+                    <!-- search and filter section -->
+                    <div class="row">
+                        <div class="col-lg-9 col-12">
+                            <div class="search_topic">
+                                <form>
+                                    <div class="input-group">
+                                        <input class="form-control" type="text"
+                                            placeholder="ابحث بإسم المساعد او رقم الهاتف">
+                                        <span class="icon_search"><i class="bi bi-search"></i></span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-12">
+                            <div class="dropdown dropdown_filter">
+                                <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    جميع المراحل التعليمية
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                    <li><a class="dropdown-item" href="#">جامعي</a></li>
+                                    <li><a class="dropdown-item" href="#">أساسي </a></li>
+                                    <li><a class="dropdown-item" href="#">حر </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card section -->
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="card_topic">
+                                <div class="info">
+                                    <div class="img">
+                                        <img src="../image/person.png" alt="person">
+                                    </div>
+                                    <h5>احمد فتحي</h5>
+                                    <h6>مرحلة اساسية</h6>
+                                    <p>رقم الجوال : <a class="parg" href="tel:01093140277"> 01096</a>
+                                    </p>
+                                    <p> البريد الالكتروني : <a class="parg" href="mailto:someone@yoursite.com">
+                                            mt7899@gmail
+                                        </a>
+                                    </p>
+
+                                </div>
+                                <div class="edit">
+                                    <span><i class="bi bi-three-dots"></i></span>
+                                </div>
+                            </div>
+                            <ul class="drop_menu_info">
+                                <li><a href="edit-assistant.html">تعديل البيانات</a></li>
+                                <li><a href="#"> حذف الحساب</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!---------------------- finish  content -------------------------------------------->
+
+        </section>
+        <!---------------------- finish main content -------------------------------------------->
+
+    </main>
+
+
+    <!---------------------- finish footer -------------------------------------------->
+
+    <!-- main js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- main js -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <!-- sweet alert for delete -->
+    <script>
+        function acceptAlert() {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    )
+                }
+            })
+        };
+    </script>
+
+</body>
+
+</html>

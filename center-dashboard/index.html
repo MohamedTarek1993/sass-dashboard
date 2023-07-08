@@ -8,18 +8,19 @@
     <title> Index</title>
     <!-- main css -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
     <link rel="stylesheet" href="../main-scss/main.min.css" />
     <link rel="stylesheet" href="scss/main.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
 
     <!-- responsive -->
-    <!-- data table -->
-    <!-- data table -->
+
     <!-- ? Favicon -->
-    <link rel="icon" href="./image/Icon-black.png" type="image" />
+    <link rel="icon" href="../image/logo.png" type="image" />
     <!-- ? Favicon -->
 </head>
 
-<body>
+<body onclick="hideNotification(event)">
     <!---------------------- start loader -------------------------------------------->
     <!-- <div id="preloader"></div> -->
     <!---------------------- finish loader -------------------------------------------->
@@ -37,9 +38,9 @@
           mb-sm-auto mb-0
           align-items-center align-items-sm-start
         " id="menu">
-            <div class="image_logo">
-            <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
-          </div> 
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
                 <li class="nav-item">
                     <a href="index.html" class="nav-link align-middle">
                         <img src="../image/icon-home.png" alt="icon" />
@@ -47,37 +48,43 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="lessons.html" class="nav-link align-middle">
+                    <a href="assistants.html" class="nav-link align-middle">
                         <img src="../image/icon-assis.png" alt="icon" />
                         <span>المساعدين</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="grade.html" class="nav-link align-middle">
+                    <a href="courses.html" class="nav-link align-middle">
                         <img src="../image/icon-video.png" alt="icon" />
                         <span> الكورسات</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="subjects.html" class="nav-link align-middle">
+                    <a href="students.html" class="nav-link align-middle">
                         <img src="../image/icon-people.png" alt="icon" />
                         <span>الطلاب</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="exams.html" class="nav-link align-middle">
+                    <a href="notfication.html" class="nav-link align-middle">
                         <img src="../image/icon-notification-bing.png" alt="icon" />
                         <span>الاشعارات</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="competitions.html" class="nav-link align-middle">
-                        <img src="../image/icon-setting.png" alt="icon" />
-                        <span> الحساب</span>
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-security.png" alt="icon" />
+                        <span> اعدادات الامان</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="questions.html" class="nav-link align-middle">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
                         <img src="../image/icon-login.png" alt="icon" />
                         <span> تسجيل الخروج</span>
                     </a>
@@ -96,53 +103,441 @@
                         <i class="bi bi-list"></i>
                     </div>
                     <div class="info">
-                        <div class="notfication">
+                        <div class="notfication" onclick="showNotification()">
                             <i class="bi bi-bell"></i>
                             <span class="alerts">
                                 3
                             </span>
                         </div>
+
                         <div class="img">
                             <img src="../image/person.png" alt="person">
                         </div>
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <div>
-                                    <h5>name last name</h5>
-                                    <h6> stydent</h6>
-                                </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
                             </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
                             </ul>
                         </div>
+
+
                     </div>
-                 
+
                 </div>
             </nav>
+            <ul class="notfication_list">
+                <h2>الأشعارات</h2>
+                <i class="bi bi-x close-icon" onclick="hideNotification()"></i>
+
+                <li class="unread" onclick="convertToRead(this)">
+                    <div class="info">
+                        <h6> text</h6>
+                        <span> 22/6/1993</span>
+                    </div>
+                    <div class="delete">
+                        <i class="bi bi-trash"></i>
+                    </div>
+                </li>
+                <li class="read">
+                    <div class="info">
+                        <h6> text</h6>
+                        <span> 22/6/1993</span>
+                    </div>
+                    <div class="delete">
+                        <i class="bi bi-trash"></i>
+                    </div>
+                </li>
+            </ul>
             <!---------------------- finish nav -------------------------------------------->
             <!---------------------- start content -------------------------------------------->
 
-            <!---------------------- finish  content -------------------------------------------->
+            <div class="container">
+                <!-- start cards section -->
+                <div class="card_lists">
+                    <div class="row px-5">
+                        <!-- start card -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card_list">
+                                <div class="info">
+                                    <h6>الطلاب</h6>
+                                    <div class="counter" data-target="250">250</div>
+                                    <span>جميع الطلاب لديك</span>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/card1.png" alt="card">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish card -->
+                        <!-- start card -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card_list">
+                                <div class="info">
+                                    <h6>الكورسات</h6>
+                                    <div class="counter" data-target="50">50</div>
+                                    <span>جميع الكورسات لديك</span>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/card2.png" alt="card">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish card -->
 
+                        <!-- start card -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card_list">
+                                <div class="info">
+                                    <h6>الحصص</h6>
+                                    <div class="counter" data-target="40">40</div>
+                                    <span> جميع الحصص لديك</span>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/card3.png" alt="card">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish card -->
+
+                        <!-- start card -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card_list">
+                                <div class="info">
+                                    <h6>الفيديوهات</h6>
+                                    <div class="counter" data-target="45">45</div>
+                                    <span> جميع المواد لدي المُدرسين</span>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/card4.png" alt="card">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish card -->
+
+                    </div>
+                </div>
+                <!-- finish cards section -->
+                <!-- start charts section -->
+                <div class="charts_section">
+                    <div class="row px-5">
+                        <div class="col-lg-6 col-12">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <!-- <canvas id="myChart1"></canvas> -->
+                            <canvas id="myChart1"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- finish charts  section -->
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <!-- start table section -->
+                        <div class=" row_filter">
+                            <div class="row pb-5">
+                                <div class="col-lg-6 col-12">
+                                    <div class="filter_index_table">
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true" data-placeholder="الاكثر تفاعل خلال الشهر">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            طالب
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            مادة
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table-responsive table_topic">
+                                <thead>
+                                    <tr>
+                                        <td> اسم الطالب </td>
+                                        <td> اسم الكورس</td>
+                                        <td> عدد مرات المشاهدة</td>
+                                        <td> مدة المشاهدة</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>
+                                            احمد فتحي
+                                        </td>
+                                        <td>محاسبة مالية</td>
+                                        <td>24</td>
+                                        <td>20 دقيقة</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- pagination -->
+                            <nav class="pagination_section">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                            <!-- pagination -->
+
+
+                        </div>
+                        <!-- start table section -->
+                    </div>
+
+                    <div class="col-lg-4 col-12">
+                        <div class="more_cards">
+                            <!-- start card -->
+                            <div class="card">
+                                <div class="info">
+                                    <div class="img">
+                                        <img src="../image/person.png" alt="person">
+                                    </div>
+                                    <div class="teaxt">
+                                        <h6>أ /محمد طارق</h6>
+                                        <p>المًدرس الاكثر طلاب في المنصة</p>
+                                    </div>
+                                </div>
+                                <div class="shape">
+                                    <img src="../image/Graphic1.png" alt="">
+                                </div>
+                            </div>
+                            <!-- finish card -->
+
+                            <!-- start card -->
+                            <div class="card">
+                                <div class="info">
+                                    <div class="img">
+                                        <img src="../image/person.png" alt="person">
+                                    </div>
+                                    <div class="teaxt">
+                                        <h6>أ /محمد طارق</h6>
+                                        <p> الطالب الاكثر اشتراك في المنصة</p>
+                                    </div>
+                                </div>
+                                <div class="shape">
+                                    <img src="../image/Graphic2.png" alt="">
+                                </div>
+                            </div>
+                            <!-- finish card -->
+
+                            <!-- start card -->
+                            <div class="card">
+                                <div class="info">
+                                    <div class="img">
+                                        <img src="../image/person.png" alt="person">
+                                    </div>
+                                    <div class="teaxt">
+                                        <h6> مادة المحاسبة المالية</h6>
+                                        <p> المادة الاكثر طلاب في المنصة</p>
+                                    </div>
+                                </div>
+                                <div class="shape">
+                                    <img src="../image/Graphic1.png" alt="">
+                                </div>
+                            </div>
+                            <!-- finish card -->
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!---------------------- finish  content -------------------------------------------->
         </section>
         <!---------------------- finish main content -------------------------------------------->
-
     </main>
-
-
     <!---------------------- finish footer -------------------------------------------->
-
     <!-- main js -->
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
     <script src="../js/main.js"></script>
     <!-- main js -->
+    <!-- chart tabel -->
+    <script src="../js/chart.min.js"></script>
+    <!-- chart tabel -->
+    <!-- counter -->
 
+    <script src="../js/counterup.min.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script>
+        $('.counter').counterUp({
+            delay: 20,
+            time: 3000
+        });
+    </script>
 
+    <!-- counter -->
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweet alert -->
+    <!-- charts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById("myChart1").getContext("2d");
+            const labels = ['تفاعل الطلاب', ' الكورسات'];
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'My Dataset',
+                    data: [12, 19],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)', // Color for Branch 1
+                        'rgba(54, 162, 235, 0.2)',  // Color for Branch 2
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',    // Border color for Branch 1
+                        'rgba(54, 162, 235, 1)',    // Border color for Branch 2
+
+                    ],
+                    borderWidth: 1
+                }]
+            };
+            const config = {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: true,
+                    animations: {
+                        tension: {
+                            duration: 4000,
+                            easing: 'linear',
+                            from: 1,
+                            to: 0,
+                            loop: true
+                        }
+                    },
+                    interaction: {
+                        intersect: false
+                    },
+                    scales: {
+                        x: {
+                            stacked: true
+                        },
+                        y: {
+                            stacked: true
+                        }
+                    }
+                }
+            };
+            const myChart = new Chart(ctx, config);
+        });
+    </script>
+    <!-- chart tabel1 -->
+    <script>
+        const zy = document.getElementById("myChart2").getContext('2d');
+        const labels3 = [
+            '5 Jan',
+            '10 Jan',
+            '15 Jan',
+            '20 Jan',
+            '25 Jan',
+            '30 Jan',
+            '5 Feb',
+            '10 Feb',
+            '15 Feb',
+            '20 Feb',
+
+        ];
+        const data3 = {
+            labels: labels3,
+            datasets: [
+                {
+                    label: 'المحقق',
+                    data: [80, 81, 56, 55, 40, 80, 30, 20, 70, 60],
+                    backgroundColor: [
+                        'rgba(85, 66, 264, 1)',
+
+                    ],
+                    borderColor: [
+                        'rgba(85, 66, 264, 1)',
+                    ],
+                    borderWidth: 1,
+                    barPercentage: 1,
+                    barThickness: 15,
+                    // maxBarThickness: 8,
+                    minBarLength: 6,
+                }]
+        };
+        const config3 = {
+            type: 'line',
+            data: data3,
+
+            options: {
+                animations: {
+                    tension: {
+                        duration: 4000,
+                        easing: 'linear',
+                        from: 1,
+                        to: 0,
+                        loop: true
+                    }
+                },
+                responsive: true,
+                interaction: {
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true
+                    }
+                }
+            },
+        };
+        const myChart3 = new Chart(zy, config3);
+    </script>
+    <!--chart tabel1-->
+    <!-- charts -->
+
+    <!-- convert class unread to read -->
+    <script>
+        function convertToRead(element) {
+            element.classList.remove("unread");
+            element.classList.add("read");
+        }
+    </script>
+    <script>
+
+        function showNotification() {
+            var notificationList = document.querySelector('.notfication_list');
+            notificationList.classList.add('show-notification');
+            event.stopPropagation();
+        }
+        function hideNotification(event) {
+            var notificationList = document.querySelector('.notfication_list');
+            notificationList.classList.remove('show-notification');
+        }
+
+    </script>
+    <!-- convert class unread to read -->
 </body>
 
 </html>
