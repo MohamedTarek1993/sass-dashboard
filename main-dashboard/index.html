@@ -7,931 +7,433 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Index</title>
     <!-- main css -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../main-scss/main.min.css" />
     <link rel="stylesheet" href="scss/main.min.css" />
-    <link rel="stylesheet" href="css/datapicker.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
+
     <!-- responsive -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- data table -->
-    <link rel="stylesheet" href="css/data-table.css">
-    <!-- data table -->
+
     <!-- ? Favicon -->
-    <link rel="icon" href="./image/Icon-black.png" type="image" />
+    <link rel="icon" href="../image/logo.png" type="image" />
     <!-- ? Favicon -->
 </head>
 
-<body>
+<body onclick="hideNotification(event)">
     <!---------------------- start loader -------------------------------------------->
     <!-- <div id="preloader"></div> -->
     <!---------------------- finish loader -------------------------------------------->
     <!---------------------- start scroll-up -------------------------------------------->
     <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
     <!---------------------- finish scroll-up -------------------------------------------->
-    <!---------------------- start dark && light mood -------------------------------------------->
-    <div id="toggle">
-        <span class="light " id="light">
-            <i class="bi bi-brightness-high"></i>
-        </span>
-        <span class="dark" id="dark">
-            <i class="bi bi-moon-fill "></i>
-        </span>
-        <div class="indicator">
-        </div>
-    </div>
-    <!---------------------- finish dark && light mood -------------------------------------------->
 
+    <main class="d-flex sidemobile p-0">
+        <!---------------------- start sidebar -------------------------------------------->
 
-    <section class="system">
-        <div class="container-fluid px-0">
-            <div class="container_page">
-                <!-- <div class="col-lg-2 col-md-5 col- px-0"> -->
-                <!-- strat side bar -->
-                <div class="sidebar collapsed  ">
-                    <div class="logo ">
-                        <img src="image/Icon-Grey.png" alt="">
-                        <div class="toggle_menu">
-                            <i class="bi bi-list"></i>
-                        </div>
-                        <div class="upper_section_res">
-                            <div class="info">
-                                <img src="image/per1.png" alt="person">
-                                <h6> Admin Name </h6>
-                            </div>
-                        </div>
-
-                    </div>
-                    <ul class="menu-side-bar">
-                        <li class="side-item">
-                            <a class="side-link active" href="index.html">
-                                <i class="bi bi-bar-chart"></i>
-                                Dashboard
-
-                            </a>
-                        </li>
-                        <li class="side-item">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-person-square"></i>
-
-                                Admines
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-admins.html"> All Admines</a>
-                                <a class="side-link " href="create-admin.html"> Create Admines </a>
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-                        <li class="side-item">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-person-fill"></i>
-                                Users
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-users.html"> All Users</a>
-                                <a class="side-link" href="create-user.html"> Create Users </a>
-
-
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-                        <li class="side-item">
-                            <a class="side-link" href="regular-visits.html">
-                                <i class="bi bi-card-heading"></i>
-                                Regular Visits
-                            </a>
-                        </li>
-
-                        <li class="side-item">
-                            <a class="side-link" href="new-visit.html">
-                                <i class="bi bi-file-earmark-plus-fill"></i>
-                                New Visit
-                            </a>
-                        </li>
-                        <li class="side-item">
-                            <a class="side-link" href="acountant.html">
-                                <i class="bi bi-calculator"></i>
-                                Accountant
-                            </a>
-                        </li>
-
-                        <li class="side-item">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-bar-chart-steps"></i>
-                                Branches
-
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-branches.html"> All Branches</a>
-                                <a class="side-link" href="create-branche.html"> Create Branches </a>
-
-
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-
-                        <li class="side-item">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-diagram-2"></i>
-                                Items
-
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-item.html"> All Items</a>
-                                <a class="side-link" href="create-item.html"> Create Items </a>
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-
-                        <li class="side-item">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-brush-fill"></i>
-                                Arts
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-art.html"> All Arts</a>
-                                <a class="side-link" href="create-arts.html l "> Create Arts </a>
-
-
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-
-                        <li class="side-item">
-                            <a class="side-link" href="settings.html">
-                                <i class="bi bi-gear-fill"></i>
-                                Settings
-                            </a>
-                        </li>
-                        <li class="side-item">
-                            <a class="side-link" href="#">
-                                <i class="bi bi-box-arrow-left"></i>
-                                Logout
-                            </a>
-                        </li>
-
-                    </ul>
+        <section class="sidebar open">
+            <ul class="
+          nav nav-pills
+          flex-column
+          mb-sm-auto mb-0
+          align-items-center align-items-sm-start
+        " id="menu">
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
                 </div>
-                <!-- strat side bar -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="../image/icon-home.png" alt="icon" />
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="app-user.html" class="nav-link align-middle">
+                        <img src="../image/app-user icon.png" alt="icon" />
+                        <span>مستخدمي التطبيق</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="web-user.html" class="nav-link align-middle">
+                        <img src="../image/icon-monitor.png" alt="icon" />
+                        <span> مستخدمي الويب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employee.html" class="nav-link align-middle">
+                        <img src="../image/icon-tag-user.png" alt="icon" />
+                        <span>الموظفين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notfication.html" class="nav-link align-middle">
+                        <img src="../image/icon-book.png" alt="icon" />
+                        <span>التعليم الاساسي</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-teacher.png" alt="icon" />
+                        <span> التعليم الجامعي</span>
+                    </a>
+                </li>
 
-                <!-- start sidebar collapsed -->
-                <div class="sidebar sidebar_resize ">
-                    <div class="logo ">
-                        <img src="image/Icon-Grey.png" alt="">
-                        <div class="toggle_menu">
-                            <i class="bi bi-list"></i>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-bookmark-2.png" alt="icon" />
+                        <span> التعليم الحر</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="location.html" class="nav-link align-middle">
+                        <img src="../image/icon-map.png" alt="icon" />
+                        <span> الموقع الجغرافي</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="power.html" class="nav-link align-middle">
+                        <img src="../image/icon-medal-star.png" alt="icon" />
+                        <span> الصلاحيات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
+                        <img src="../image/icon-login.png" alt="icon" />
+                        <span> تسجيل الخروج</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+        <!---------------------- end sidebar -------------------------------------------->
+        <!---------------------- start main content -------------------------------------------->
+
+        <section class="index_cards">
+            <!---------------------- start nav -------------------------------------------->
+            <nav class="nav_top navbar">
+                <div class="container">
+                    <div class="menu">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <div class="info">
+                        <div class="notfication" onclick="showNotification()">
+                            <i class="bi bi-bell"></i>
+                            <span class="alerts">
+                                3
+                            </span>
                         </div>
-                        <div class="upper_section_res">
-                            <div class="info">
-                                <img src="image/per1.png" alt="person">
-                                <h6> Admin Name </h6>
-                            </div>
+
+                        <div class="img">
+                            <img src="../image/person.png" alt="person">
                         </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
+                            </ul>
+                        </div>
+
 
                     </div>
-                    <ul class="menu-side-bar">
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard">
-                            <a class="side-link active" href="index.html">
-                                <i class="bi bi-bar-chart"></i>
 
-                            </a>
-                        </li>
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Admin">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-person-square"></i>
-
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-admins.html"> All Admines</a>
-                                <a class="side-link " href="create-admin.html"> Create Admines </a>
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Users">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-person-fill"></i>
-
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-users.html"> All Users</a>
-                                <a class="side-link" href="create-user.html"> Create Users </a>
-
-
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Regular Visits">
-                            <a class="side-link" href="regular-visits.html">
-                                <i class="bi bi-card-heading"></i>
-
-                            </a>
-                        </li>
-
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="New Visit">
-                            <a class="side-link" href="new-visit.html">
-                                <i class="bi bi-file-earmark-plus-fill"></i>
-
-                            </a>
-                        </li>
-
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Branches">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-bar-chart-steps"></i>
-
-
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-branches.html"> All Branches</a>
-                                <a class="side-link" href="create-branche.html"> Create Branches </a>
-
-
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Items">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-diagram-2"></i>
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-item.html"> All Items</a>
-                                <a class="side-link" href="create-item.html"> Create Items </a>
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Arts">
-                            <button class="dropdown-btn btn">
-                                <span>
-                                    <i class="bi bi-chevron-right"></i>
-                                </span>
-                                <i class="bi bi-brush-fill"></i>
-
-                            </button>
-                            <!-- drop-menu -->
-                            <div class="dropdown-container">
-                                <a class="side-link" href="all-art.html"> All Arts</a>
-                                <a class="side-link" href="create-arts.html l "> Create Arts </a>
-                            </div>
-                            <!-- drop-menu -->
-                        </li>
-
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Settings">
-                            <a class="side-link" href="settings.html">
-                                <i class="bi bi-gear-fill"></i>
-
-                            </a>
-                        </li>
-                        <li class="side-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Logout">
-                            <a class="side-link" href="#">
-                                <i class="bi bi-box-arrow-left"></i>
-
-                            </a>
-                        </li>
-
-                    </ul>
                 </div>
-                <!-- start sidebar collapsed -->
+            </nav>
+            <ul class="notfication_list">
+                <h2>الأشعارات</h2>
+                <i class="bi bi-x close-icon" onclick="hideNotification()"></i>
 
-                <!-- </div> -->
-                <!-- <div class="col-lg-10 col-md-7 col-12 px-0"> -->
-                <div class="contect_side change">
-                    <div class="upper_section">
-                        <div class="time">
-                            <span> Time : </span>
-                            <div id="current-time"></div>
-                        </div>
-                        <div class="time">
-                            <span>Date : </span>
-                            <div id="current-date"></div>
-                        </div>
-                        <div class="info">
-                            <img src="image/per1.png" alt="person">
-                            <h6> Admin Name </h6>
-                        </div>
-
-
+                <li class="unread" onclick="convertToRead(this)">
+                    <div class="info">
+                        <h6> text</h6>
+                        <span> 22/6/1993</span>
                     </div>
+                    <div class="delete">
+                        <i class="bi bi-trash"></i>
+                    </div>
+                </li>
+                <li class="read">
+                    <div class="info">
+                        <h6> text</h6>
+                        <span> 22/6/1993</span>
+                    </div>
+                    <div class="delete">
+                        <i class="bi bi-trash"></i>
+                    </div>
+                </li>
+            </ul>
+            <!---------------------- finish nav -------------------------------------------->
+            <!---------------------- start content -------------------------------------------->
 
-                    <div class="main">
-                        <h2> 😄 Welcome In KidsHup </h2>
-                        <div class="information create_admin">
-                            <h2 class="main_head">
-                                Daily Statistics
-                            </h2>
-                            <!-- start daily report -->
-                            <div class="d-flex align-items-start">
-                                <div class="nav flex-column nav-pills me-3 tab_info" id="v-pills-tab" role="tablist"
-                                    aria-orientation="vertical">
-                                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-home" type="button" role="tab"
-                                        aria-controls="v-pills-home" aria-selected="true">All Branches</button>
-                                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-profile" type="button" role="tab"
-                                        aria-controls="v-pills-profile" aria-selected="false">Branch 1</button>
-                                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-messages" type="button" role="tab"
-                                        aria-controls="v-pills-messages" aria-selected="false">Branch 2</button>
-                                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-settings" type="button" role="tab"
-                                        aria-controls="v-pills-settings" aria-selected="false">Branch 3</button>
+            <div class="container">
+                <!-- start cards section -->
+                <div class="card_lists">
+                    <div class="row px-5">
+                        <!-- start card -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card_list">
+                                <div class="info">
+                                    <h6>الطلاب</h6>
+                                    <div class="counter" data-target="250">250</div>
+                                    <span>جميع الطلاب لديك</span>
                                 </div>
-                                <div class="tab-content" id="v-pills-tabContent">
-                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                        aria-labelledby="v-pills-home-tab">
-                                        <div class="box">
-                                            <div class="card">
-                                                <img src="image/card1.png" alt="card1">
-                                                <div class="text">
-                                                    <h5> Total No.Of Childern </h5>
-                                                    <h6>5 Childern / 6 Vists </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card2.png" alt="card2">
-                                                <div class="text">
-                                                    <h5> Total Sales</h5>
-                                                    <h6>500 Sales </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Art</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Snackes</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                        aria-labelledby="v-pills-profile-tab">
-                                        <div class="box">
-                                            <div class="card">
-                                                <img src="image/card1.png" alt="card1">
-                                                <div class="text">
-                                                    <h5> Total No.Of Childern </h5>
-                                                    <h6>5 Childern / 6 Vists </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card2.png" alt="card2">
-                                                <div class="text">
-                                                    <h5> Total Sales</h5>
-                                                    <h6>500 Sales </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Art</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Snackes</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                        aria-labelledby="v-pills-messages-tab">
-                                        <div class="box">
-                                            <div class="card">
-                                                <img src="image/card1.png" alt="card1">
-                                                <div class="text">
-                                                    <h5> Total No.Of Childern </h5>
-                                                    <h6>5 Childern / 6 Vists </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card2.png" alt="card2">
-                                                <div class="text">
-                                                    <h5> Total Sales</h5>
-                                                    <h6>500 Sales </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Art</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Snackes</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                        aria-labelledby="v-pills-settings-tab">
-                                        <div class="box">
-                                            <div class="card">
-                                                <img src="image/card1.png" alt="card1">
-                                                <div class="text">
-                                                    <h5> Total No.Of Childern </h5>
-                                                    <h6>5 Childern / 6 Vists </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card2.png" alt="card2">
-                                                <div class="text">
-                                                    <h5> Total Sales</h5>
-                                                    <h6>500 Sales </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Art</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Snackes</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- finish daily report -->
-
-                        </div>
-
-
-                        <div class="information create_admin">
-                            <h2 class="main_head">
-                                Current Statistics
-                            </h2>
-                            <!-- start daily report -->
-                            <div class="d-flex align-items-start">
-                                <div class="nav flex-column nav-pills me-3 tab_info" id="v-pills-tab" role="tablist"
-                                    aria-orientation="vertical">
-                                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-home" type="button" role="tab"
-                                        aria-controls="v-pills-home" aria-selected="true">All Branches</button>
-                                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-profile" type="button" role="tab"
-                                        aria-controls="v-pills-profile" aria-selected="false">Branch 1</button>
-                                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-messages" type="button" role="tab"
-                                        aria-controls="v-pills-messages" aria-selected="false">Branch 2</button>
-                                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-settings" type="button" role="tab"
-                                        aria-controls="v-pills-settings" aria-selected="false">Branch 3</button>
-                                </div>
-                                <div class="tab-content" id="v-pills-tabContent">
-                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                        aria-labelledby="v-pills-home-tab">
-                                        <div class="box">
-                                            <div class="card">
-                                                <img src="image/card1.png" alt="card1">
-                                                <div class="text">
-                                                    <h5> Total No.Of Childern </h5>
-                                                    <h6>5 Childern / 6 Vists </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card2.png" alt="card2">
-                                                <div class="text">
-                                                    <h5> Total Sales</h5>
-                                                    <h6>500 Sales </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Art</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Snackes</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                        aria-labelledby="v-pills-profile-tab">
-                                        <div class="box">
-                                            <div class="card">
-                                                <img src="image/card1.png" alt="card1">
-                                                <div class="text">
-                                                    <h5> Total No.Of Childern </h5>
-                                                    <h6>5 Childern / 6 Vists </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card2.png" alt="card2">
-                                                <div class="text">
-                                                    <h5> Total Sales</h5>
-                                                    <h6>500 Sales </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Art</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Snackes</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                        aria-labelledby="v-pills-messages-tab">
-                                        <div class="box">
-                                            <div class="card">
-                                                <img src="image/card1.png" alt="card1">
-                                                <div class="text">
-                                                    <h5> Total No.Of Childern </h5>
-                                                    <h6>5 Childern / 6 Vists </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card2.png" alt="card2">
-                                                <div class="text">
-                                                    <h5> Total Sales</h5>
-                                                    <h6>500 Sales </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Art</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Snackes</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                        aria-labelledby="v-pills-settings-tab">
-                                        <div class="box">
-                                            <div class="card">
-                                                <img src="image/card1.png" alt="card1">
-                                                <div class="text">
-                                                    <h5> Total No.Of Childern </h5>
-                                                    <h6>5 Childern / 6 Vists </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card2.png" alt="card2">
-                                                <div class="text">
-                                                    <h5> Total Sales</h5>
-                                                    <h6>500 Sales </h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Art</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/card3.png" alt="card3">
-                                                <div class="text">
-                                                    <h5> Snackes</h5>
-                                                    <h6>1000 LE /64 Unites</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- finish daily report -->
-
-                        </div>
-                        <!-- start coprision branches -->
-                        <div class="copmrision create_admin">
-                            <h2 class="main_head">
-                                Compare branches
-                            </h2>
-                            <div class="d-flex align-items-start">
-                                <div class="tab-content" id="v-pills-tabContent">
-                                    <!-- no of kids -->
-                                    <div class="tab-pane fade show active" id="v-pills-kids" role="tabpanel"
-                                        aria-labelledby="v-pills-kids-tab">
-                                        <canvas id="myChart1"></canvas>
-
-                                    </div>
-                                    <!-- no of kids -->
-                                    <!-- no of Visits -->
-                                    <div class="tab-pane fade" id="v-pills-visit" role="tabpanel"
-                                        aria-labelledby="v-pills-visit-tab">
-
-                                    </div>
-                                    <!-- no of Visits -->
-                                    <!-- no of sales -->
-                                    <div class="tab-pane fade" id="v-pills-sales" role="tabpanel"
-                                        aria-labelledby="v-pills-sales-tab">
-                                    </div>
-                                    <!-- no of sales -->
-                                    <!-- no of art -->
-                                    <div class="tab-pane fade" id="v-pills-art" role="tabpanel"
-                                        aria-labelledby="v-pills-art-tab">...</div>
-                                    <!-- no of art -->
-                                    <!-- no of snacks -->
-                                    <div class="tab-pane fade" id="v-pills-snacks" role="tabpanel"
-                                        aria-labelledby="v-pills-snacks-tab">...</div>
-                                    <!-- no of snacks -->
-                                </div>
-
-                                <div class="nav flex-column nav-pills me-3 " id="v-pills-tab" role="tablist"
-                                    aria-orientation="vertical">
-                                    <button class="nav-link active" id="v-pills-kids-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-kids" type="button" role="tab"
-                                        aria-controls="v-pills-kids" aria-selected="true"><i
-                                            class="bi bi-chevron-double-left"></i> No. Of Kids </button>
-
-                                    <button class="nav-link" id="v-pills-visit-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-visit" type="button" role="tab"
-                                        aria-controls="v-pills-visit" aria-selected="false"><i
-                                            class="bi bi-chevron-double-left"></i> No. Of Visits</button>
-
-                                    <button class="nav-link" id="v-pills-sales-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-sales" type="button" role="tab"
-                                        aria-controls="v-pills-sales" aria-selected="false"><i
-                                            class="bi bi-chevron-double-left"></i> Total Sales</button>
-
-                                    <button class="nav-link" id="v-pills-art-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-art" type="button" role="tab"
-                                        aria-controls="v-pills-art" aria-selected="false"><i
-                                            class="bi bi-chevron-double-left"></i>Total Art </button>
-
-                                    <button class="nav-link" id="v-pills-snacks-tab" data-bs-toggle="pill"
-                                        data-bs-target="#v-pills-snacks" type="button" role="tab"
-                                        aria-controls="v-pills-snacks" aria-selected="false"><i
-                                            class="bi bi-chevron-double-left"></i>Total Sancks </button>
+                                <div class="img">
+                                    <img src="../image/card1.png" alt="card">
                                 </div>
                             </div>
                         </div>
-                        <!-- finish coprision branches -->
-                        <!-- start best selling unite -->
-                        <div class="selling_unites create_admin">
-                            <h2 class="main_head">
-                                Selling Unites
-                            </h2>
-                            <div class="filter_sec">
-                                <div class="row">
-                                    <div class="col-lg-4 col-12">
-                                        <div class="input-group">
-                                            <label class="form-label"> Choose Label </label>
-                                            <select class="selectpicker" multiple data-selected-text-format="count > 1"
-                                                data-icon="bi bi-trash" data-live-search="true">
-
-                                                <option value="1">Branch 1</option>
-                                                <option value="2">Branch 2</option>
-                                                <option value="3">Branch 3</option>
-                                                <option value="3">Over All</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-12">
-                                        <label class="form-label"> Choose Date </label>
-                                        <input class="form-control" type="text" id="datepicker" readonly>
-                                        <button class="btn" id="openCalendarButton">Date</button>
-                                    </div>
-                                    <div class="col-lg-4 col-12">
-                                        <label class="form-label"> Choose Topic </label>
-                                        <div class="input-group">
-                                            <select class="selectpicker" multiple data-selected-text-format="count > 1"
-                                                data-icon="bi bi-trash" data-live-search="true">
-
-                                                <option value="1">Hours</option>
-                                                <option value="2"> Arts</option>
-                                                <option value="3">Item</option>
-
-                                            </select>
-                                        </div>
-                                    </div>
+                        <!-- finish card -->
+                        <!-- start card -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card_list">
+                                <div class="info">
+                                    <h6>الكورسات</h6>
+                                    <div class="counter" data-target="50">50</div>
+                                    <span>جميع الكورسات لديك</span>
                                 </div>
-                                <table id="tableOrder" style="width:100%" class=" display table-responsive table">
-                                    <thead>
-                                        <tr>
-                                            <th> Item</th>
-                                            <th> Unites</th>
-                                            <th> Value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td data-label="Item">#251422 </td>
-                                            <td data-label="Unites">
-                                                Ahmed </td>
-                                            <td data-label="Value">010931420</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- finish best selling unite -->
-
-                        <!-- start parent visit -->
-                        <div class="parent_visit  create_admin">
-                            <h2 class="main_head">
-                                Parent Visit
-                            </h2>
-                            <div class="filter_sec">
-                                <div class="row">
-                                    <div class="chart" data-aos="zoom-in-left" data-aos-duration="1000">
-                                        <h6> Staticks for parent Visits per Hours in every weekdays</h6>
-
-                                        <canvas id="myChart2"></canvas>
-                                    </div>
+                                <div class="img">
+                                    <img src="../image/card2.png" alt="card">
                                 </div>
                             </div>
                         </div>
-                        <!-- finish parent visit -->
+                        <!-- finish card -->
+
+                        <!-- start card -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card_list">
+                                <div class="info">
+                                    <h6>الحصص</h6>
+                                    <div class="counter" data-target="40">40</div>
+                                    <span> جميع الحصص لديك</span>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/card3.png" alt="card">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish card -->
+
+                        <!-- start card -->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card_list">
+                                <div class="info">
+                                    <h6>الفيديوهات</h6>
+                                    <div class="counter" data-target="45">45</div>
+                                    <span> جميع المواد لدي المُدرسين</span>
+                                </div>
+                                <div class="img">
+                                    <img src="../image/card4.png" alt="card">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finish card -->
 
                     </div>
                 </div>
-                <!-- </div> -->
+                <!-- finish cards section -->
+                <!-- start charts section -->
+                <div class="charts_section">
+                    <div class="row px-5">
+                        <div class="col-lg-6 col-12">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <!-- <canvas id="myChart1"></canvas> -->
+                            <canvas id="myChart1"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- finish charts  section -->
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <!-- start table section -->
+                        <div class=" row_filter">
+                            <div class="row pb-5">
+                                <div class="col-lg-6 col-12">
+                                    <div class="filter_index_table">
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true" data-placeholder="الاكثر تفاعل خلال الشهر">
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            طالب
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            مادة
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table-responsive table_topic">
+                                <thead>
+                                    <tr>
+                                        <td> اسم الطالب </td>
+                                        <td> اسم الكورس</td>
+                                        <td> عدد مرات المشاهدة</td>
+                                        <td> مدة المشاهدة</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+                                        <td>
+                                            احمد فتحي
+                                        </td>
+                                        <td>محاسبة مالية</td>
+                                        <td>24</td>
+                                        <td>20 دقيقة</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- pagination -->
+                            <nav class="pagination_section">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                            <!-- pagination -->
+
+
+                        </div>
+                        <!-- start table section -->
+                    </div>
+
+                    <div class="col-lg-4 col-12">
+                        <div class="more_cards">
+                            <!-- start card -->
+                            <div class="card">
+                                <div class="info">
+                                    <div class="img">
+                                        <img src="../image/person.png" alt="person">
+                                    </div>
+                                    <div class="teaxt">
+                                        <h6>أ /محمد طارق</h6>
+                                        <p>المًدرس الاكثر طلاب في المنصة</p>
+                                    </div>
+                                </div>
+                                <div class="shape">
+                                    <img src="../image/Graphic1.png" alt="">
+                                </div>
+                            </div>
+                            <!-- finish card -->
+
+                            <!-- start card -->
+                            <div class="card">
+                                <div class="info">
+                                    <div class="img">
+                                        <img src="../image/person.png" alt="person">
+                                    </div>
+                                    <div class="teaxt">
+                                        <h6>أ /محمد طارق</h6>
+                                        <p> الطالب الاكثر اشتراك في المنصة</p>
+                                    </div>
+                                </div>
+                                <div class="shape">
+                                    <img src="../image/Graphic2.png" alt="">
+                                </div>
+                            </div>
+                            <!-- finish card -->
+
+                            <!-- start card -->
+                            <div class="card">
+                                <div class="info">
+                                    <div class="img">
+                                        <img src="../image/person.png" alt="person">
+                                    </div>
+                                    <div class="teaxt">
+                                        <h6> مادة المحاسبة المالية</h6>
+                                        <p> المادة الاكثر طلاب في المنصة</p>
+                                    </div>
+                                </div>
+                                <div class="shape">
+                                    <img src="../image/Graphic1.png" alt="">
+                                </div>
+                            </div>
+                            <!-- finish card -->
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
 
-
-    <div class="lower_footer">
-        <div class="container">
-            <p>© 2023 <a style="color: #f2a922;" href="http://bigbang.me">BIGBAN</a>, ALL RIGHTS RESERVED
-            </p>
-        </div>
-    </div>
-
+            <!---------------------- finish  content -------------------------------------------->
+        </section>
+        <!---------------------- finish main content -------------------------------------------->
+    </main>
     <!---------------------- finish footer -------------------------------------------->
-
     <!-- main js -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/main.js"></script>
     <!-- main js -->
-      <!-- chart tabel -->
-      <script src="js/chart.min.js"></script>
-      <!-- chart tabel -->
+    <!-- chart tabel -->
+    <script src="../js/chart.min.js"></script>
+    <!-- chart tabel -->
+    <!-- counter -->
+
+    <script src="../js/counterup.min.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script>
+        $('.counter').counterUp({
+            delay: 20,
+            time: 3000
+        });
+    </script>
+
+    <!-- counter -->
     <!-- sweet alert -->
-    <script src="js/sweet-alert.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- sweet alert -->
-   
-    <!-- data picker -->
-    <script src="js/datapicker.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <!-- data picker -->
-    <script src="js/bootstrap-select.min.js"></script>
-    <!-- data table -->
-    <script src="js/data-table.js"></script>
-    
-    <script>
-        $(document).ready(function () {
-            $('#tableOrder').DataTable();
-        });
-    </script>
-
-    <!-- data table -->
-
-    <script>
-        $(document).ready(function () {
-            $('.form-select').selectpicker();
-        });
-
-    </script>
-    <!-- sweet alert for add favorit -->
-    <script>
-        function acceptAlert() {
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                    )
-                }
-            })
-        };
-    </script>
-    <!-- sweet alert for add favorit -->
-
-    <!-- calender js -->
-    <script>
-        $(document).ready(function () {
-            $("#datepicker").datepicker({
-                dateFormat: "yy-mm-dd", // Format the selected date
-                showOn: "button", // Show the datepicker when the button is clicked
-                buttonText: "Select Date", // Button text
-                buttonImageOnly: true, // Only show the button image
-                buttonImage: "https://code.jquery.com/ui/1.13.0/themes/base/images/calendar.svg", // Calendar button image
-                onSelect: function (dateText) {
-                    console.log("Selected date: " + dateText);
-                }
-            });
-
-            $("#openCalendarButton").on("click", function () {
-                $("#datepicker").datepicker("show"); // Show the datepicker when the button is clicked
-            });
-        });
-
-    </script>
-    <!-- calender js -->
-
-
+    <!-- charts -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const ctx = document.getElementById("myChart1").getContext("2d");
-            const labels = ['Branch 1', 'Branch 2', 'Branch 3'];
+            const labels = ['تفاعل الطلاب', ' الكورسات'];
             const data = {
                 labels: labels,
                 datasets: [{
                     label: 'My Dataset',
-                    data: [12, 19, 3],
+                    data: [12, 19],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)', // Color for Branch 1
                         'rgba(54, 162, 235, 0.2)',  // Color for Branch 2
-                        'rgba(255, 206, 86, 0.2)'   // Color for Branch 3
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',    // Border color for Branch 1
                         'rgba(54, 162, 235, 1)',    // Border color for Branch 2
-                        'rgba(255, 206, 86, 1)'     // Border color for Branch 3
+
                     ],
                     borderWidth: 1
                 }]
@@ -966,88 +468,96 @@
             const myChart = new Chart(ctx, config);
         });
     </script>
-
-
-    <!--parent visit-->
-
+    <!-- chart tabel1 -->
     <script>
         const zy = document.getElementById("myChart2").getContext('2d');
-        const weekdays = [
-            'Sunday',
-            'Monday',
-            'Tuesday',
-            'Wednesday',
-            'Thursday',
-            'Friday',
-            'Saturday'
+        const labels3 = [
+            '5 Jan',
+            '10 Jan',
+            '15 Jan',
+            '20 Jan',
+            '25 Jan',
+            '30 Jan',
+            '5 Feb',
+            '10 Feb',
+            '15 Feb',
+            '20 Feb',
+
         ];
-
-        // Generate labels for hours from 12 PM to 12 AM
-        const hours = [];
-        for (let i = 0; i <= 12; i++) {
-            const hour = (i === 0) ? 12 : i;
-            const label = `${hour} ${i < 12 ? 'AM' : 'PM'}`;
-            hours.push(label);
-        }
-
         const data3 = {
-            labels: weekdays,
-            datasets: []
+            labels: labels3,
+            datasets: [
+                {
+                    label: 'المحقق',
+                    data: [80, 81, 56, 55, 40, 80, 30, 20, 70, 60],
+                    backgroundColor: [
+                        'rgba(85, 66, 264, 1)',
+
+                    ],
+                    borderColor: [
+                        'rgba(85, 66, 264, 1)',
+                    ],
+                    borderWidth: 1,
+                    barPercentage: 1,
+                    barThickness: 15,
+                    // maxBarThickness: 8,
+                    minBarLength: 6,
+                }]
         };
-
-        // Define an array of colors
-        const colors = [
-            'rgba(85, 66, 264, 0.6)',
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(153, 102, 255, 0.6)',
-            'rgba(255, 159, 64, 0.6)'
-        ];
-
-        // Generate a dataset for each hour
-        for (let i = 0; i < hours.length; i++) {
-            const dataset = {
-                label: hours[i],
-                data: [
-                    80, 81, 56, 55, 40, 80, 30 // Replace with actual data values for each weekday and hour
-                ],
-                backgroundColor: colors[i % colors.length], // Assign a different color to each dataset
-                borderColor: 'rgba(85, 66, 264, 1)',
-                borderWidth: 1
-            };
-
-            data3.datasets.push(dataset);
-        }
-
         const config3 = {
-            type: 'bar',
+            type: 'line',
             data: data3,
+
             options: {
+                animations: {
+                    tension: {
+                        duration: 4000,
+                        easing: 'linear',
+                        from: 1,
+                        to: 0,
+                        loop: true
+                    }
+                },
                 responsive: true,
-                indexAxis: 'y', // Set the index axis to y-axis
+                interaction: {
+                    intersect: false,
+                },
                 scales: {
                     x: {
                         stacked: true,
-                        beginAtZero: true
                     },
                     y: {
                         stacked: true
                     }
                 }
-            }
+            },
         };
-
         const myChart3 = new Chart(zy, config3);
+    </script>
+    <!--chart tabel1-->
+    <!-- charts -->
 
+    <!-- convert class unread to read -->
+    <script>
+        function convertToRead(element) {
+            element.classList.remove("unread");
+            element.classList.add("read");
+        }
+    </script>
+    <script>
 
+        function showNotification() {
+            var notificationList = document.querySelector('.notfication_list');
+            notificationList.classList.add('show-notification');
+            event.stopPropagation();
+        }
+        function hideNotification(event) {
+            var notificationList = document.querySelector('.notfication_list');
+            notificationList.classList.remove('show-notification');
+        }
 
     </script>
-    <!--parent visit-->
-
-   
-
+    <!-- convert class unread to read -->
 </body>
 
 </html>
