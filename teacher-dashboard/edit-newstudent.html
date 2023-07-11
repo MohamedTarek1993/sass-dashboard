@@ -397,44 +397,44 @@
     <script src="../js/main.js"></script>
     <!-- main js -->
 
-    <!-- show / hide  education  type -->
-    <script>
-        // This function for main education
-        function toggleRow() {
-            var checkbox = document.getElementById('radio1');
-            var hiddenRow = document.getElementById('mainEducation');
-            var checkbox2 = document.getElementById('radio2');
-            var hiddenRow2 = document.getElementById('universityEducation');
-            var checkbox3 = document.getElementById('radio3');
-            var hiddenRow3 = document.getElementById('freeEducation');
+        <!-- show / hide  education  type -->
+        <script>
+            // This function for main education
+            function toggleRow() {
+                var checkbox = document.getElementById('radio1');
+                var hiddenRow = document.getElementById('mainEducation');
+                var checkbox2 = document.getElementById('radio2');
+                var hiddenRow2 = document.getElementById('universityEducation');
+                var checkbox3 = document.getElementById('radio3');
+                var hiddenRow3 = document.getElementById('freeEducation');
 
-            if (checkbox.checked) {
-                // Show the hidden row
-                hiddenRow.classList.remove('main_education');
-                hiddenRow2.classList.add('university_education');
-                hiddenRow3.classList.add('free_education');
+                if (checkbox.checked) {
+                    // Show the hidden row
+                    hiddenRow.classList.remove('main_education');
+                    hiddenRow2.classList.add('university_education');
+                    hiddenRow3.classList.add('free_education');
+                }
+                else if(checkbox2.checked) {
+                    // Show the hidden row
+                    hiddenRow.classList.add('main_education');
+                    hiddenRow2.classList.remove('university_education');
+                    hiddenRow3.classList.add('free_education');
+
+                }
+                else  if(checkbox3.checked) {
+                    // Show the hidden row
+                    hiddenRow.classList.add('main_education');
+                    hiddenRow2.classList.add('university_education');
+                    hiddenRow3.classList.remove('free_education');
+                }
+            
+            
+            
             }
-            else if(checkbox2.checked) {
-                // Show the hidden row
-                hiddenRow.classList.add('main_education');
-                hiddenRow2.classList.remove('university_education');
-                hiddenRow3.classList.add('free_education');
-
-            }
-            else  if(checkbox3.checked) {
-                // Show the hidden row
-                hiddenRow.classList.add('main_education');
-                hiddenRow2.classList.add('university_education');
-                hiddenRow3.classList.remove('free_education');
-            }
-          
-           
-        
-        }
 
 
-    </script>
-    <!-- show main education -->
+        </script>
+        <!-- show main education -->
 
 </body>
 
