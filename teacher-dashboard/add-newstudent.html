@@ -173,16 +173,28 @@
                         </div>
                         <!-- finish input -->
                         <!-- start input -->
-                      <!-- start input -->
-                      <div class="row">
-                        <div class="col-12">
-                            <div class="input-group">
-                                <label class="form-label"> اسم الطالب </label>
-                                <input required type="text" class="form-control" placeholder=" اكتب اسم الطالب">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <label class="form-label">المراحل التعليمية</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="educationType" id="radio1"
+                                            onchange="toggleRow()" value="option1">
+                                        <label class="form-check-label" for="radio1">تعليم اساسي</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="educationType" id="radio2"
+                                            onchange="toggleRow()" value="option2">
+                                        <label class="form-check-label" for="radio2">تعليم جامعي</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="educationType" id="radio3"
+                                            onchange="toggleRow()" value="option3">
+                                        <label class="form-check-label" for="radio3">تعليم حر</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- finish input -->
                         <!-- finish input -->
                         <!-- main education -->
                         <div class="main_education" id="mainEducation">
