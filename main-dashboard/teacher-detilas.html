@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Index</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../main-scss/main.min.css" />
+    <link rel="stylesheet" href="scss/main.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
+
+    <!-- responsive -->
+
+    <!-- ? Favicon -->
+    <link rel="icon" href="../image/logo.png" type="image" />
+    <!-- ? Favicon -->
+</head>
+
+<body onclick="hideNotification(event)">
+    <!---------------------- start loader -------------------------------------------->
+    <!-- <div id="preloader"></div> -->
+    <!---------------------- finish loader -------------------------------------------->
+    <!---------------------- start scroll-up -------------------------------------------->
+    <a id="button" class="scroll-up"><i class="bi bi-chevron-up"></i></a>
+    <!---------------------- finish scroll-up -------------------------------------------->
+
+    <main class="d-flex sidemobile p-0">
+        <!---------------------- start sidebar -------------------------------------------->
+
+        <section class="sidebar open">
+            <ul class="
+          nav nav-pills
+          flex-column
+          mb-sm-auto mb-0
+          align-items-center align-items-sm-start
+        " id="menu">
+                <div class="image_logo">
+                    <img src="../image/logo.png" alt="logo_sidebar" class="logo" />
+                </div>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link align-middle">
+                        <img src="../image/icon-home.png" alt="icon" />
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="app-user.html" class="nav-link align-middle">
+                        <img src="../image/app-user icon.png" alt="icon" />
+                        <span>مستخدمي التطبيق</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="web-user.html" class="nav-link align-middle">
+                        <img src="../image/icon-monitor.png" alt="icon" />
+                        <span> مستخدمي الويب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employee.html" class="nav-link align-middle">
+                        <img src="../image/icon-tag-user.png" alt="icon" />
+                        <span>الموظفين</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notfication.html" class="nav-link align-middle">
+                        <img src="../image/icon-book.png" alt="icon" />
+                        <span>التعليم الاساسي</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-teacher.png" alt="icon" />
+                        <span> التعليم الجامعي</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="acccountant-sucerty.html" class="nav-link align-middle">
+                        <img src="../image/icon-bookmark-2.png" alt="icon" />
+                        <span> التعليم الحر</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="location.html" class="nav-link align-middle">
+                        <img src="../image/icon-map.png" alt="icon" />
+                        <span> الموقع الجغرافي</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="power.html" class="nav-link align-middle">
+                        <img src="../image/icon-medal-star.png" alt="icon" />
+                        <span> الصلاحيات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="acountant-settings.html" class="nav-link align-middle">
+                        <img src="../image/icon-setting.png" alt="icon" />
+                        <span> اعدادات الحساب</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle">
+                        <img src="../image/icon-login.png" alt="icon" />
+                        <span> تسجيل الخروج</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+        <!---------------------- end sidebar -------------------------------------------->
+        <!---------------------- start main content -------------------------------------------->
+
+        <section class="index_cards">
+            <!---------------------- start nav -------------------------------------------->
+            <nav class="nav_top navbar">
+                <div class="container">
+                    <div class="menu">
+                        <i class="bi bi-list"></i>
+                    </div>
+                    <div class="info">
+                        <div class="notfication" onclick="showNotification()">
+                            <i class="bi bi-bell"></i>
+                            <span class="alerts">
+                                3
+                            </span>
+                        </div>
+
+                        <div class="img">
+                            <img src="../image/person.png" alt="person">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn  btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                محمد طارق
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li> <a href="acountant-settings.html">اعدادات الحساب</a> </li>
+                                <li> <a href="acccountant-sucerty.html">اعدادات الأمان</a> </li>
+                                <li onclick="acceptAlert()"> تسجيل الخروج </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </nav>
+            <ul class="notfication_list">
+                <h2>الأشعارات</h2>
+                <i class="bi bi-x close-icon" onclick="hideNotification()"></i>
+
+                <li class="unread" onclick="convertToRead(this)">
+                    <div class="info">
+                        <h6> text</h6>
+                        <span> 22/6/1993</span>
+                    </div>
+                    <div class="delete">
+                        <i class="bi bi-trash"></i>
+                    </div>
+                </li>
+                <li class="read">
+                    <div class="info">
+                        <h6> text</h6>
+                        <span> 22/6/1993</span>
+                    </div>
+                    <div class="delete">
+                        <i class="bi bi-trash"></i>
+                    </div>
+                </li>
+            </ul>
+            <!---------------------- finish nav -------------------------------------------->
+            <!---------------------- start content -------------------------------------------->
+
+            <div class="content_page">
+                <div class="container">
+                    <!-- header section -->
+                    <div class="main_topic">
+                        <h4> المدرسين / تفاصيل المدرس </h4>
+                    </div>
+
+                    <header class="header">
+
+                        <video id="header-video" poster="../image/header-vedio.png">
+                        </video>
+                        <div class="edit">
+                            <span onclick="toggleMenu('drop-menu-info')"><i class="bi bi-three-dots"></i></span>
+                        </div>
+                        <ul id="drop-menu-info" class="drop_menu_info">
+                            <li><a href="edit-teacher.html">تعديل البيانات</a></li>
+                            <li><a href="edit-assistant.html"> الغاء تفعيل</a></li>
+                            <li><a onclick="deleteion()"> حذف الكورس</a></li>
+                        </ul>
+                    </header>
+
+
+                    <div class="detials_course">
+                        <div class="row">
+                            <div class="content">
+                                <div class="img">
+                                    <img src="../image/person.png" alt="person">
+                                </div>
+                                <h2> احمد فتحي</h2>
+                                <p> المحاسبة المالية</p>
+                                <ul>
+                                    <li> <i class="bi bi-telephone-fill"></i> رقم الهاتف : <span>01010101010</span></li>
+
+                                    <li> <i class="bi bi-geo-alt-fill"></i> الموقع الجغرافي :
+                                        <span>الدقهلية , المنصورة , ش المجزر</span>
+                                    </li>
+                                    <li> <i class="bi bi-envelope-fill"></i> البريد الالكتروني :
+                                        <span>
+                                            username22@gmail.com
+                                        </span>
+                                    </li>
+                                    <li> <i class="bi bi-card-list"></i> المنصة المُستخدمة :
+                                        <span>
+                                            تطبيق
+                                        </span>
+                                    </li>
+                                    <li> <i class="bi bi-bank"></i> المرحلة التعليمية :
+                                        <span> جامعي,خاص</span>
+                                    </li>
+                                    <li><i class="bi bi-card-checklist"></i> الفرقة :
+                                        <span> الفرقة الاولي, ترم اول</span>
+                                    </li>
+                                    <li><i class="bi bi-tags"></i> الجامعة :
+                                        <span> طنطا, كلية تجارة</span>
+                                    </li>
+                                    <li><i class="bi bi-briefcase"></i> القسم :
+                                        <span> 4 مواد</span>
+                                    </li>
+
+                                    <li> <i class="bi bi-wallet-fill"></i> المواد :
+                                        <span> محاسبة</span>
+                                    </li>
+
+                                    <li> <i class="bi bi-bullseye"></i> اجمالي الطلاب :
+                                        <span> 250 طالب</span>
+                                    </li>
+
+                                    <li> <i class="bi bi-file-play"></i> اجمالي الكورسات :
+                                        <span> 52 كورس</span>
+                                    </li>
+                                    <li> <i class="bi bi-calendar-range"></i> مدة الاشتراك :
+                                        <span> من 5-8-2022 حتي 5-8-2023 </span>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="all_courses">
+                        <h6>جميع الكورسات (25 كورس)</h6>
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          <div class="text">
+                                            <h5>كورس مادة الاحصاء <span>(الفرقة الاولي)</span></h5>
+                                            <p>200 طالب , 24 حصة , 20 مذكرة pdf</p>
+                                        </div>
+
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="info">
+                                            <ul class="class">
+                                                <li>
+                                                    <i class="bi bi-file-play"></i>
+                                                    الحصة الاولي : مُقدمة
+                                                </li>
+                                                <li>
+                                                    <i class="bi bi-file-play"></i>
+                                                    الحصة الثانية : شرح اساسيات و مفاهيم محاسبية
+                                                </li>
+                                            </ul>
+                                            <hr>
+                                            <ul class="lesson">
+                                                <li>
+                                                    <i class="bi bi-card-list"></i>
+                                                    المذكرة الاولي : شرح اساسيات و مفاهيم محاسبية
+                                                </li>
+                                                <li>
+                                                    <i class="bi bi-card-list"></i>
+                                                    المذكرة الثانية : شرح اساسيات و مفاهيم محاسبية
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="button">
+                                            <button class="btn block">الغاء تفعيل</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!---------------------- finish  content -------------------------------------------->
+        </section>
+        <!---------------------- finish main content -------------------------------------------->
+    </main>
+    <!---------------------- finish footer -------------------------------------------->
+    <!-- main js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- main js -->
+    <!-- chart tabel -->
+    <script src="../js/chart.min.js"></script>
+    <!-- chart tabel -->
+    <!-- counter -->
+    <!-- counter -->
+        <!-- show / hide edit menu in card -->
+        <script>
+            function toggleMenu(menuId) {
+                var menu = document.getElementById(menuId);
+                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            }
+
+            document.addEventListener('click', function (event) {
+                var menu = document.getElementById('drop-menu-info');
+                var target = event.target;
+
+                if (!target.matches('.bi-three-dots')) {
+                    menu.style.display = 'none';
+                }
+            });
+        </script>
+        <!-- show / hide edit menu in card -->
+    <!-- sweet alert -->
+
+</body>
+
+</html>

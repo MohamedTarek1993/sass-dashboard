@@ -368,6 +368,42 @@
                                     </div>
 
                                 </div>
+
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card_topic">
+                                        <a href="detials-course.html">
+                                        <div class="info">
+                                            <div class="img">
+                                                <img src="../image/person.png" alt="person">
+                                            </div>
+                                            <h5>احمد فتحي</h5>
+                                            <h6>مرحلة اساسية</h6>
+                                            <ul>
+                                                <li><i class="bi bi-columns-gap"></i> <span>عدد الحصص : 150 حصة</span>
+                                                </li>
+                                                <li><i class="bi bi-person-lines-fill"></i> <span> عدد الطلاب : 300
+                                                    </span></li>
+                                                <li><i class="bi bi-briefcase"></i> <span> الجامعة : طنطا,كلية تجارة
+                                                    </span></li>
+                                                <li><i class="bi bi-cash-coin"></i> <span> سعر الكورس : 250 ج.م
+                                                    </span></li>
+                                            </ul>
+
+                                        </div>
+                                    </a>
+                                        <div class="edit">
+                                            <span onclick="toggleMenu('drop-menu-info')"><i
+                                                    class="bi bi-three-dots"></i></span>
+                                        </div>
+                                        <ul id="drop-menu-info" class="drop_menu_info">
+                                            <li><a href="edit-course.html">تعديل البيانات</a></li>
+                                            <li><a href="detials-course.html"> عرض التفاصيل</a></li>
+                                            <li><a href="edit-assistant.html"> عرض جميع الطلاب</a></li>
+                                            <li><a onclick="deleteion()"> حذف الكورس</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
                             </div>
                             <nav class="pagination_section">
                                 <ul class="pagination justify-content-center">
@@ -414,7 +450,6 @@
 
                                         </td>
                                     </tr>
-
                                 </tbody>
                             </table>
                             <!-- pagination -->
@@ -431,8 +466,6 @@
                         </div>
                         <!-- list section -->
                     </div>
-
-
                 </div>
             </div>
             <!---------------------- finish  content -------------------------------------------->
@@ -513,7 +546,5 @@
         });
     </script>
     <!-- show / hide edit menu in card -->
-
 </body>
-
 </html>

@@ -173,25 +173,26 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <label class="form-label"> المراحل التعليمية</label>
+                                    <label class="form-label">المراحل التعليمية</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                        <input class="form-check-input" type="radio" name="educationType" id="radio1"
                                             onchange="toggleRow()" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">تعليم اساسي</label>
+                                        <label class="form-check-label" for="radio1">تعليم اساسي</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                            value="option2" onchange="toggleUniversity()">
-                                        <label class="form-check-label" for="inlineCheckbox2">تعليم جامعي</label>
+                                        <input class="form-check-input" type="radio" name="educationType" id="radio2"
+                                            onchange="toggleRow()" value="option2">
+                                        <label class="form-check-label" for="radio2">تعليم جامعي</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
-                                            value="option3" onchange="toggleFree()">
-                                        <label class="form-check-label" for="inlineCheckbox3">تعليم حر </label>
+                                        <input class="form-check-input" type="radio" name="educationType" id="radio3"
+                                            onchange="toggleRow()" value="option3">
+                                        <label class="form-check-label" for="radio3">تعليم حر</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- finish input -->
                         <!-- main education -->
                         <div class="main_education" id="mainEducation">
@@ -400,43 +401,38 @@
     <script>
         // This function for main education
         function toggleRow() {
-            var checkbox = document.getElementById('inlineCheckbox1');
+            var checkbox = document.getElementById('radio1');
             var hiddenRow = document.getElementById('mainEducation');
+            var checkbox2 = document.getElementById('radio2');
+            var hiddenRow2 = document.getElementById('universityEducation');
+            var checkbox3 = document.getElementById('radio3');
+            var hiddenRow3 = document.getElementById('freeEducation');
 
             if (checkbox.checked) {
                 // Show the hidden row
                 hiddenRow.classList.remove('main_education');
-            } else {
-                // Hide and remove the row
-                hiddenRow.classList.add('main_education');
-            }
-        }
-        // This function for Unversity education
-        function toggleUniversity() {
-            var checkbox2 = document.getElementById('inlineCheckbox2');
-            var hiddenRow2 = document.getElementById('universityEducation');
-
-            if (checkbox2.checked) {
-                // Show the hidden row
-                hiddenRow2.classList.remove('university_education');
-            } else {
-                // Hide and remove the row
                 hiddenRow2.classList.add('university_education');
-            }
-        }
-        // This function for free education
-        function toggleFree() {
-            var checkbox3 = document.getElementById('inlineCheckbox3');
-            var hiddenRow3 = document.getElementById('freeEducation');
-
-            if (checkbox3.checked) {
-                // Show the hidden row
-                hiddenRow3.classList.remove('free_education');
-            } else {
-                // Hide and remove the row
                 hiddenRow3.classList.add('free_education');
             }
+            else if(checkbox2.checked) {
+                // Show the hidden row
+                hiddenRow.classList.add('main_education');
+                hiddenRow2.classList.remove('university_education');
+                hiddenRow3.classList.add('free_education');
+
+            }
+            else  if(checkbox3.checked) {
+                // Show the hidden row
+                hiddenRow.classList.add('main_education');
+                hiddenRow2.classList.add('university_education');
+                hiddenRow3.classList.remove('free_education');
+            }
+          
+           
+        
         }
+
+
     </script>
     <!-- show main education -->
 

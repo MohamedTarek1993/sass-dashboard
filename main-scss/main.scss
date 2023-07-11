@@ -2328,3 +2328,100 @@ form .file-upload-wrapper input {
   cursor: pointer;
   font-size: 1.5rem;
 }
+
+.all_courses{
+  border-top: 1px solid #E3E3E3;
+  padding-top: 30px;
+  h6{
+    font-size: 1rem;
+    color: #111827;
+    font-family: 'regular';
+    font-weight: 700;
+  }
+  .accordion{
+    .accordion-item{
+      .accordion-header{
+        .accordion-button{
+          .text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h5{
+              font-size: 1rem;
+              color: #111827;
+              font-family: 'regular';
+              font-weight: 700;
+            }
+            p{
+              color: #5C5C6B;
+              font-size: .8rem;
+              font-family: 'light';
+              font-weight: 300;
+            }
+          }
+         
+        }
+      }
+      .accordion-body{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        .info{
+        width: 70%;
+          ul{
+            li{
+              color: #5C5C6B;
+              font-family: 'regular';
+              font-weight: 400;
+              font-size: .7rem;
+              margin-bottom: 3%;
+            }
+          }
+        }
+        .button{
+          width: 24%;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .techer_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    flex-direction: column;
+    border: 1px solid #E3E3E3;
+    border-radius: 8px;
+    .img{
+      width: 80px;
+      height: 80px;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    h6{
+      font-size: 1rem;
+      color: #111827;
+      font-family: 'regular';
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+    span{
+      color: #5C5C6B;
+      font-size: .8rem;
+      font-family: 'light';
+      font-weight: 300;
+    }
+    .button{
+      margin: 3rem 0 1rem;
+      .btn{
+        width: 100%;
+      }
+    }
+  }
+}
