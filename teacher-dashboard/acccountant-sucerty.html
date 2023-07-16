@@ -145,14 +145,15 @@
                                 <div class="input-group">
                                     <label class="form-label"> مشاهدة الفيديوهات</label>
                                     <div class="form-check form-check-inline">
-                                        <input  onchange="toggleVedio()" class="form-check-input" type="checkbox" id="inlineCheckbox4"
-                                            value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1"> محدود</label>
+                                        <input onchange="toggleVedio()" class="form-check-input" type="radio"
+                                            name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">
+                                            محدود</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5"
-                                            value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2"> غير محدود</label>
+                                        <input onchange="toggleVedio()" class="form-check-input" type="radio"
+                                            name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2"> غير محدود</label>
                                     </div>
 
                                 </div>
@@ -163,7 +164,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="input-group">
-                                        <label class="form-label">  عدد المشاهدة</label>
+                                        <label class="form-label"> عدد المشاهدة</label>
                                         <input type="text" class="form-control">
 
                                     </div>
@@ -172,20 +173,20 @@
                             </div>
                         </div>
 
-                         <!-- start input -->
-                         <div class="row">
+                        <!-- start input -->
+                        <div class="row">
                             <div class="col-12">
                                 <div class="input-group">
-                                    <label class="form-label">  كود الفيديوهات</label>
+                                    <label class="form-label"> كود الفيديوهات</label>
                                     <div class="form-check form-check-inline">
-                                        <input  onchange="toggleCode()" class="form-check-input" type="checkbox" id="inlineCheckbox6"
-                                            value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1"> اظهار</label>
+                                        <input onchange="toggleCode()" class="form-check-input" type="radio"
+                                            id="inlineCheckbox6" value="option1"   name="inlineRadioOption">
+                                        <label class="form-check-label" for="inlineCheckbox6"> اظهار</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox7"
+                                        <input  onchange="toggleCode()" name="inlineRadioOption" class="form-check-input" type="radio" id="inlineCheckbox7"
                                             value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2">  اخفاء</label>
+                                        <label class="form-check-label" for="inlineCheckbox7"> اخفاء</label>
                                     </div>
 
                                 </div>
@@ -196,9 +197,10 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="input-group">
-                                        <label class="form-label">   نوع الكود</label>
-                                        <select required class="selectpicker" multiple data-selected-text-format="count > 1"
-                                            data-icon="bi bi-trash" data-live-search="true">
+                                        <label class="form-label"> نوع الكود</label>
+                                        <select required class="selectpicker" multiple
+                                            data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                            data-live-search="true">
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
@@ -212,8 +214,7 @@
 
                         <div class="row">
                             <div class="col-lg-6">
-                                <button type="button" 
-                                    class="btn first">الاضافة والحفظ</button>
+                                <button type="button" class="btn first">الاضافة والحفظ</button>
                             </div>
                         </div>
                     </form>
@@ -242,13 +243,14 @@
     <script>
 
         function toggleVedio() {
-            var checkbox = document.getElementById('inlineCheckbox4');
+            var checkbox = document.getElementById('inlineRadio1');
+            var checkboxSec = document.getElementById('inlineRadio2');
             var hiddenRow = document.getElementById('vedioLimit');
 
             if (checkbox.checked) {
                 // Show the hidden row
                 hiddenRow.classList.remove('course_price');
-            } else {
+            } else if(checkboxSec.checked) {
                 // Hide and remove the row
                 hiddenRow.classList.add('course_price');
             }
@@ -256,17 +258,18 @@
     </script>
     <!-- show / hide  vedio limit -->
 
-     <!-- show / hide  vedio limit -->
-     <script>
+    <!-- show / hide  vedio limit -->
+    <script>
 
         function toggleCode() {
             var checkbox = document.getElementById('inlineCheckbox6');
+            var checkboxSec = document.getElementById('inlineCheckbox7');
             var hiddenRow = document.getElementById('ShowCode');
 
             if (checkbox.checked) {
                 // Show the hidden row
                 hiddenRow.classList.remove('course_price');
-            } else {
+            } else if(checkboxSec.checked) {
                 // Hide and remove the row
                 hiddenRow.classList.add('course_price');
             }
@@ -274,7 +277,7 @@
     </script>
     <!-- show / hide  vedio limit -->
 
-    
+
 
 </body>
 
