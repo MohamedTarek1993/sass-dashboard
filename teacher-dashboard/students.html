@@ -146,7 +146,7 @@
                     </div>
                     <!-- search and filter section -->
                     <div class="row">
-                        <div class="col-lg-9 col-12">
+                        <div class="col-lg-8 col-12">
                             <div class="search_topic">
                                 <form>
                                     <div class="input-group">
@@ -157,8 +157,17 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-12">
-                            <div class="dropdown dropdown_filter">
+                        <div class="col-lg-4 col-12">
+                            <div class="input-group input_filter">
+                                <select onchange="handleOptionSelected(this.value)" id="dropdownMenuButton2" required
+                                    class="selectpicker" data-selected-text-format="count > 1" data-icon="bi bi-trash"
+                                    data-live-search="true" data-placeholder=" جميع المراحل التعليمية">
+                                    <option value="جامعي">جامعي</option>
+                                    <option value="أساسي">أساسي</option>
+                                    <option value="حر">حر</option>
+                                </select>
+                            </div>
+                            <!-- <div class="dropdown dropdown_filter">
                                 <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     جميع المراحل التعليمية
@@ -171,7 +180,7 @@
                                     <li><a class="dropdown-item" href="#" onclick="handleOptionSelected('حر')">حر </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -413,30 +422,27 @@
 
 
     <!-- sweet alert for delete -->
- 
+
     <!-- show filter  -->
     <script>
         function handleOptionSelected(selectedOption) {
             var mainEducationFilter = document.getElementById('main-education-filter');
-            var unvesityEducationFilter = document.getElementById('unversity-education-filter');
+            var unversityEducationFilter = document.getElementById('unversity-education-filter');
             var freeEducationFilter = document.getElementById('free-education-filter');
+
+            mainEducationFilter.style.display = 'none';
+            unversityEducationFilter.style.display = 'none';
+            freeEducationFilter.style.display = 'none';
+
             if (selectedOption === 'جامعي') {
                 mainEducationFilter.style.display = 'block';
-            } else {
-                mainEducationFilter.style.display = 'none';
-            }
-            if (selectedOption === 'أساسي') {
-                unvesityEducationFilter.style.display = 'block';
-            } else {
-                unvesityEducationFilter.style.display = 'none';
-            }
-            if (selectedOption === 'حر') {
+            } else if (selectedOption === 'أساسي') {
+                unversityEducationFilter.style.display = 'block';
+            } else if (selectedOption === 'حر') {
                 freeEducationFilter.style.display = 'block';
-            } else {
-                freeEducationFilter.style.display = 'none';
             }
-
         }
+
     </script>
     <!-- show filter  -->
 
