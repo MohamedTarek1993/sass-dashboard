@@ -104,7 +104,7 @@
                 <li class="nav-item">
                     <a href="terms.html" class="nav-link align-middle">
                         <img src="../image/icon-terms.png" alt="icon" />
-                        <span>  الشروط والأحكام</span>
+                        <span> الشروط والأحكام</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -279,53 +279,88 @@
                                 <div class="col-lg-6 col-12">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault1">
+                                            id="flexRadioDefault1" onchange="toogleThing()">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             طالب
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2" checked>
+                                            id="flexRadioDefault2" onchange="toogleThing()">
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             مادة
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                            <table class="table-responsive table_topic">
-                                <thead>
-                                    <tr>
-                                        <td> اسم الطالب </td>
-                                        <td> اسم الكورس</td>
-                                        <td> عدد مرات المشاهدة</td>
-                                        <td> مدة المشاهدة</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
+                            <div id="studenTable" class="course_price">
+                                <table class=" table-responsive table_topic">
+                                    <thead>
+                                        <tr>
+                                            <td> اسم الطالب </td>
+                                            <td> اسم الكورس</td>
+                                            <td> عدد مرات المشاهدة</td>
+                                            <td> مدة المشاهدة</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
 
-                                        <td>
-                                            احمد فتحي
-                                        </td>
-                                        <td>محاسبة مالية</td>
-                                        <td>24</td>
-                                        <td>20 دقيقة</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            <td>
+                                                احمد فتحي
+                                            </td>
+                                            <td>محاسبة مالية</td>
+                                            <td>24</td>
+                                            <td>20 دقيقة</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- pagination -->
+                                <nav class="pagination_section">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                                <!-- pagination -->
+                            </div>
+                            <div class="course_price" id="lessonTable">
+                                <table class=" table-responsive table_topic">
+                                    <thead>
+                                        <tr>
+                                            <td> اسم الدرس </td>
+                                            <td> اسم الكورس</td>
+                                            <td> عدد مرات المشاهدة</td>
+                                            <td> مدة المشاهدة</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                احمد فتحي
+                                            </td>
+                                            <td>محاسبة مالية</td>
+                                            <td>24</td>
+                                            <td>20 دقيقة</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- pagination -->
+                                <nav class="pagination_section">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                                <!-- pagination -->
+                            </div>
 
-                            <!-- pagination -->
-                            <nav class="pagination_section">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-                            <!-- pagination -->
 
 
                         </div>
@@ -562,6 +597,23 @@
 
     </script>
     <!-- convert class unread to read -->
+    <script>
+        function toogleThing() {
+            var chechStudent = document.getElementById('flexRadioDefault1');
+            var chechLesson = document.getElementById('flexRadioDefault2');
+            var hiddenRowStudent = document.getElementById('studenTable');
+            var hiddenRowLesson = document.getElementById('lessonTable');
+            if (chechStudent.checked) {
+                // Show the hidden row
+                hiddenRowStudent.classList.remove('course_price');
+                hiddenRowLesson.classList.add('course_price');
+            } else if (chechLesson.checked) {
+                // Hide and remove the row
+                hiddenRowStudent.classList.add('course_price');
+                hiddenRowLesson.classList.remove('course_price');
+            }
+        }
+    </script>
 </body>
 
 </html>

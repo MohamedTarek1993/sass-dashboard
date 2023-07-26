@@ -2430,3 +2430,12 @@ form .file-upload-wrapper input {
     padding: 0;
   }
 }
+
+.course_price {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.2s, max-height 0.2s;
+  margin-bottom: 3%;
+
+}
