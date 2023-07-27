@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
     <link rel="stylesheet" href="../main-scss/main.min.css" />
+    <link rel="stylesheet" href="../css/data-table.css">
     <link rel="stylesheet" href="scss/main.min.css" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css"> -->
 
@@ -96,7 +97,7 @@
                         <span> تسجيل الخروج</span>
                     </a>
                 </li>
-        
+
             </ul>
         </section>
         <!---------------------- end sidebar -------------------------------------------->
@@ -257,7 +258,7 @@
                                 </div>
                             </div>
                             <!-- table -->
-                            <table class="table-responsive table_topic">
+                            <table id="tableOrder" class="table-responsive table_topic">
                                 <thead>
                                     <tr>
                                         <td>اسم </td>
@@ -292,18 +293,7 @@
 
                                 </tbody>
                             </table>
-                            <!-- pagination -->
-                            <nav class="pagination_section">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-                            <!-- pagination -->
-
+                         
                         </div>
                         <!-- student section -->
                         <!-- courses section -->
@@ -328,7 +318,7 @@
                                 </div>
                             </div>
                             <!-- table -->
-                            <table class="table-responsive table_topic">
+                            <table id="tableOrder1" class="table-responsive table_topic">
                                 <thead>
                                     <tr>
                                         <td>اسم الكورس </td>
@@ -366,17 +356,7 @@
 
                                 </tbody>
                             </table>
-                            <!-- pagination -->
-                            <nav class="pagination_section">
-                                <ul class="pagination justify-content-center">
-                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                </ul>
-                            </nav>
-                            <!-- pagination -->
+                           
                         </div>
                         <!-- courses section -->
 
@@ -413,10 +393,17 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/data-table.js"></script>
     <script src="../js/main.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- main js -->
+    <script>
+        $(document).ready(function () {
+            $('#tableOrder').DataTable();
+            $('#tableOrder1').DataTable();
+        });
+    </script>
     <script>
 
         function openVideo() {
