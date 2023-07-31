@@ -2431,11 +2431,20 @@ form .file-upload-wrapper input {
   }
 }
 
-.course_price {
+// .course_price {
+//   display: none;
+//   max-height: 0;
+//   overflow: hidden;
+//   transition: opacity 0.2s, max-height 0.2s;
+//   margin-bottom: 3%;
+
+// }
+
+.course-price {
   display: none;
   max-height: 0;
   overflow: hidden;
   transition: opacity 0.2s, max-height 0.2s;
-  margin-bottom: 3%;
-
 }
+
+
