@@ -135,76 +135,154 @@
             <div class="content_page">
                 <div class="container">
                     <!-- header section -->
-                    <div class="main_topic">
+                    <!-- <div class="main_topic">
                         <h4> اضافة فيديو جديد </h4>
-                    </div>
-
-                    <form class="form_topic">
-
-
-                        <!-- start input -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="input-group">
-                                    <label class="form-label"> حالة الفيديو</label>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4"
-                                            value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1"> مجاني</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5"
-                                            value="option2" onchange="togglePrice()">
-                                        <label class="form-check-label" for="inlineCheckbox2"> مدفوع</label>
-                                    </div>
-
+                    </div> -->
+                    <!-- start input -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-group">
+                                <label class="form-label"> حالة الفيديو</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox10" name="vedioPdf"
+                                        onchange="toggleType()" value="option10">
+                                    <label class="form-check-label" for="inlineCheckbox10"> الفيديو</label>
                                 </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="inlineCheckbox11" name="vedioPdf"
+                                        value="option11" onchange="toggleType()">
+                                    <label class="form-check-label" for="inlineCheckbox11"> PDF</label>
+                                </div>
+
                             </div>
                         </div>
-                        <!-- finish input -->
-                        <div class="course_price" id="coursePrice">
+                    </div>
+                    <!-- finish input -->
+                    <div class="course_price" id="courseVedio">
+                        <form class="form_topic">
+
+
+                            <!-- start input -->
                             <div class="row">
                                 <div class="col-12">
                                     <div class="input-group">
-                                        <label class="form-label"> سعر الفيديو</label>
-                                        <input type="text" class="form-control">
+                                        <label class="form-label"> حالة الفيديو</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="inlineCheckbox4"
+                                           name="vedio" onchange="togglePrice()"     value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox1"> مجاني</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="inlineCheckbox5"
+                                            name="vedio"   value="option2" onchange="togglePrice()">
+                                            <label class="form-check-label" for="inlineCheckbox2"> مدفوع</label>
+                                        </div>
 
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-                        <!-- start input -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="input-group">
-                                    <label class="form-label"> اسم الفيديو</label>
-                                    <input required type="text" class="form-control" placeholder="اكتب اسم الفيديو">
+                            <!-- finish input -->
+                            <div class="course_price" id="coursePrice">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <label class="form-label"> سعر الفيديو</label>
+                                            <input type="text" class="form-control">
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- finish input -->
-
-                        <!-- start input -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="input-group">
-                                    <label class="form-label"> لينك الفيديو</label>
-                                    <input required type="url" class="form-control" placeholder="  ادخل لينك فيديو اليوتيوب">
+                            <!-- start input -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> اسم الفيديو</label>
+                                        <input required type="text" class="form-control" placeholder="اكتب اسم الفيديو">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- finish input -->
+                            <!-- finish input -->
 
-
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <button type="button" 
-                                    class="btn first">الاضافة والحفظ</button>
+                            <!-- start input -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> لينك الفيديو</label>
+                                        <input required type="url" class="form-control"
+                                            placeholder="  ادخل لينك فيديو اليوتيوب">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <!-- finish input -->
 
-                    </form>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <button type="button" class="btn first">الاضافة والحفظ</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                    <div class="course_price" id="coursePdf">
+                        <form class="form_topic">
+
+
+                            <!-- start input -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <label class="form-label"> حالة الملف</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="inlineCheckbox6"
+                                        name="pdf" onchange="togglePdf()"  value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox6"> مجاني</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" id="inlineCheckbox7"
+                                            name="pdf"    value="option2" onchange="togglePdf()">
+                                            <label class="form-check-label" for="inlineCheckbox7"> مدفوع</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- finish input -->
+                            <div class="course_price" id="coursePDFSection">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <label class="form-label"> سعر الحصة</label>
+                                            <input type="text" class="form-control">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- start input -->
+                            <div class="row">
+                                <div class="input-group pt-4">
+                                    <div class="file-upload-wrapper"
+                                        data-text="اسحب الملف التى تريد اضافته  او قم بفتحها من هنا">
+                                        <input required name="file-upload-field form-control" type="file"
+                                            class="file-upload-field" value="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- finish input -->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <button type="button" class="btn first">الاضافة والحفظ</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
 
 
@@ -225,24 +303,73 @@
     <script src="../js/main.js"></script>
     <!-- main js -->
 
+    <!-- show / hide  type  -->
+    <script>
 
-    <!-- show / hide  course price -->
+        function toggleType() {
+            var checkbox2 = document.getElementById('inlineCheckbox10');
+            var checkbox3 = document.getElementById('inlineCheckbox11');
+            var hiddenVedio = document.getElementById('courseVedio');
+            var hiddenPdf = document.getElementById('coursePdf');
+
+            if (checkbox2.checked) {
+                // Show the hidden row
+                hiddenVedio.classList.remove('course_price');
+                hiddenPdf.classList.add('course_price');
+            } else if (checkbox3.checked) {
+                // Hide and remove the row
+                hiddenVedio.classList.add('course_price');
+                hiddenPdf.classList.remove('course_price');
+            }
+        }
+    </script>
+    <!-- show / hide  co -->
+    <!-- show / hide  course vedio -->
     <script>
 
         function togglePrice() {
-            var checkbox = document.getElementById('inlineCheckbox5');
+            var checkbox5 = document.getElementById('inlineCheckbox5');
+            var checkbox4 = document.getElementById('inlineCheckbox4');
             var hiddenRow = document.getElementById('coursePrice');
 
-            if (checkbox.checked) {
+            if (checkbox5.checked) {
                 // Show the hidden row
                 hiddenRow.classList.remove('course_price');
-            } else {
+            } else if(checkbox4.checked) {
                 // Hide and remove the row
                 hiddenRow.classList.add('course_price');
             }
         }
     </script>
     <!-- show / hide  course price -->
+
+
+
+    <!-- show / hide  course pdf -->
+    <script>
+
+        function togglePdf() {
+            var checkbox6 = document.getElementById('inlineCheckbox6');
+            var checkbox7 = document.getElementById('inlineCheckbox7');
+            var hiddenPDFSec = document.getElementById('coursePDFSection');
+
+            if (checkbox6.checked) {
+                // Show the hidden row
+                hiddenPDFSec.classList.add('course_price');
+            } else if(checkbox7.checked) {
+                // Hide and remove the row
+                hiddenPDFSec.classList.remove('course_price');
+            }
+        }
+    </script>
+    <!-- show / hide  course pdf -->
+    <!-- upload file -->
+    <script>
+        $("form").on("change", ".file-upload-field", function () {
+            $(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
+        });
+    </script>
+    <!-- upload file -->
 
 
 </body>
