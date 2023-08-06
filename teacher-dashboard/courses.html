@@ -332,79 +332,14 @@
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                             aria-labelledby="pills-home-tab">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="card_topic">
-                                        <a href="detials-course.html">
-                                        <div class="info">
-                                            <div class="img">
-                                                <img src="../image/person.png" alt="person">
-                                            </div>
-                                            <h5>احمد فتحي</h5>
-                                            <h6>مرحلة اساسية</h6>
-                                            <ul>
-                                                <li><i class="bi bi-columns-gap"></i> <span>عدد الحصص : 150 حصة</span>
-                                                </li>
-                                                <li><i class="bi bi-person-lines-fill"></i> <span> عدد الطلاب : 300
-                                                    </span></li>
-                                                <li><i class="bi bi-briefcase"></i> <span> الجامعة : طنطا,كلية تجارة
-                                                    </span></li>
-                                                <li><i class="bi bi-cash-coin"></i> <span> سعر الكورس : 250 ج.م
-                                                    </span></li>
-                                            </ul>
+                            
 
-                                        </div>
-                                    </a>
-                                        <div class="edit">
-                                            <span onclick="toggleMenu('drop-menu-info')"><i
-                                                    class="bi bi-three-dots"></i></span>
-                                        </div>
-                                        <ul id="drop-menu-info" class="drop_menu_info">
-                                            <li><a href="edit-course.html">تعديل البيانات</a></li>
-                                            <li><a href="detials-course.html"> عرض التفاصيل</a></li>
-                                            <li><a href="edit-assistant.html"> عرض جميع الطلاب</a></li>
-                                            <li><a onclick="deleteion()"> حذف الكورس</a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="card_topic">
-                                        <a href="detials-course.html">
-                                        <div class="info">
-                                            <div class="img">
-                                                <img src="../image/person.png" alt="person">
-                                            </div>
-                                            <h5>احمد فتحي</h5>
-                                            <h6>مرحلة اساسية</h6>
-                                            <ul>
-                                                <li><i class="bi bi-columns-gap"></i> <span>عدد الحصص : 150 حصة</span>
-                                                </li>
-                                                <li><i class="bi bi-person-lines-fill"></i> <span> عدد الطلاب : 300
-                                                    </span></li>
-                                                <li><i class="bi bi-briefcase"></i> <span> الجامعة : طنطا,كلية تجارة
-                                                    </span></li>
-                                                <li><i class="bi bi-cash-coin"></i> <span> سعر الكورس : 250 ج.م
-                                                    </span></li>
-                                            </ul>
-
-                                        </div>
-                                    </a>
-                                        <div class="edit">
-                                            <span onclick="toggleMenu('drop-menu-info')"><i
-                                                    class="bi bi-three-dots"></i></span>
-                                        </div>
-                                        <ul id="drop-menu-info" class="drop_menu_info">
-                                            <li><a href="edit-course.html">تعديل البيانات</a></li>
-                                            <li><a href="detials-course.html"> عرض التفاصيل</a></li>
-                                            <li><a href="edit-assistant.html"> عرض جميع الطلاب</a></li>
-                                            <li><a onclick="deleteion()"> حذف الكورس</a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
+                                <div class="row" id="cards-container">
+                                  
+                                    <!-- Cards will be dynamically added here -->
+                                  </div>
+                                  
+                         
                             <nav class="pagination_section">
                                 <ul class="pagination justify-content-center">
                                     <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -441,8 +376,10 @@
                                         <td>22 حصة</td>
                                         <td>320 طالب</td>
                                         <td class="button">
-                                            <a class="btn show" href="detials-course.html"> <i class="bi bi-eye"></i></a>
-                                            <a class="btn edit" href="edit-course.html"> <i class="bi bi-pencil"></i></a>
+                                            <a class="btn show" href="detials-course.html"> <i
+                                                    class="bi bi-eye"></i></a>
+                                            <a class="btn edit" href="edit-course.html"> <i
+                                                    class="bi bi-pencil"></i></a>
                                             <button class="btn block" href="#"> <i
                                                     class="bi bi-slash-circle"></i></button>
                                             <button onclick="deleteion()" class="btn delete" href="#"> <i
@@ -462,7 +399,7 @@
                                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
                                 </ul>
                             </nav>
-                             <!-- pagination -->
+                            <!-- pagination -->
                         </div>
                         <!-- list section -->
                     </div>
@@ -530,21 +467,94 @@
     </script>
     <!-- show filter  -->
     <!-- show / hide edit menu in card -->
+
     <script>
-        function toggleMenu(menuId) {
-            var menu = document.getElementById(menuId);
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        // Function to create a card with a unique menu ID
+        function createCard(cardId) {
+            var cardHTML = `
+          <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="card_topic">
+                                        <a href="detials-course.html">
+                                            <div class="info">
+                                                <div class="img">
+                                                    <img src="../image/person.png" alt="person">
+                                                </div>
+                                                <h5>احمد فتحي</h5>
+                                                <h6>مرحلة اساسية</h6>
+                                                <ul>
+                                                    <li><i class="bi bi-columns-gap"></i> <span>عدد الحصص : 150
+                                                            حصة</span>
+                                                    </li>
+                                                    <li><i class="bi bi-person-lines-fill"></i> <span> عدد الطلاب : 300
+                                                        </span></li>
+                                                    <li><i class="bi bi-briefcase"></i> <span> الجامعة : طنطا,كلية تجارة
+                                                        </span></li>
+                                                    <li><i class="bi bi-cash-coin"></i> <span> سعر الكورس : 250 ج.م
+                                                        </span></li>
+                                                </ul>
+
+                                            </div>
+                                        </a>
+                                        <div class="edit">
+                                            <span onclick="toggleMenu('drop-menu-info-${cardId}')"><i
+                                                    class="bi bi-three-dots"></i></span>
+                                        </div>
+                                        <ul id="drop-menu-info-${cardId}" class="drop_menu_info">
+                                            <li><a href="edit-course.html">تعديل البيانات</a></li>
+                                            <li><a href="detials-course.html"> عرض التفاصيل</a></li>
+                                            <li><a href="edit-assistant.html"> عرض جميع الطلاب</a></li>
+                                            <li><a onclick="deleteion()"> حذف الكورس</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+          `;
+            return cardHTML;
         }
 
-        document.addEventListener('click', function (event) {
-            var menu = document.getElementById('drop-menu-info');
-            var target = event.target;
+        // Function to generate 10 cards dynamically
+        function generateCards() {
+            var cardsContainer = document.getElementById('cards-container');
+            for (var i = 1; i <= 3; i++) {
+                var cardId = `card-${i}`;
+                var cardHTML = createCard(cardId);
+                cardsContainer.innerHTML += cardHTML;
+            }
+        }
 
-            if (!target.matches('.bi-three-dots')) {
-                menu.style.display = 'none';
+        // Function to toggle the menu display
+        function toggleMenu(menuId) {
+            var menu = document.getElementById(menuId);
+            var menus = document.getElementsByClassName('drop_menu_info');
+
+            for (var i = 0; i < menus.length; i++) {
+                var currentMenu = menus[i];
+                if (currentMenu.id === menuId) {
+                    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+                } else {
+                    currentMenu.style.display = 'none';
+                }
+            }
+        }
+
+        // Add event listener to close menus when clicking outside
+        document.addEventListener('click', function (event) {
+            var menus = document.getElementsByClassName('drop_menu_info');
+            var target = event.target;
+            var isThreeDots = target.matches('.bi-three-dots');
+
+            if (!isThreeDots) {
+                for (var i = 0; i < menus.length; i++) {
+                    menus[i].style.display = 'none';
+                }
             }
         });
+
+        // Generate the cards on page load
+        generateCards();
     </script>
+
     <!-- show / hide edit menu in card -->
 </body>
+
 </html>
